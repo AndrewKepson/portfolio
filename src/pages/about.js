@@ -1,12 +1,12 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-import Head from '../components/head'
+import SEO from '../components/head'
 
 const AboutPage = () => {
   return (
     <Layout>
-      <Head title="About" />
+      <SEO title="About" />
       <h1>About Me</h1>
       <p>I grew up in Colorado, I love the Lord, play guitar, and run.</p>
       <p>My guitars:</p>

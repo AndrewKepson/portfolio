@@ -1,3 +1,9 @@
+$color-primary-0: #D2D7D9;	// Main Primary color */
+$color-primary-1: #869EAC;
+$color-primary-2: #A6B8C2;
+$color-primary-3: #9BA3A7;
+$color-primary-4: #878F94;
+
 .posts {
     list-style-type: none;
     margin: 0;
@@ -6,17 +12,26 @@
 
 .post {
     margin: 1rem 0;
+    transition-property: all;
+    transition-duration: 1s;
 
     a {
-        background: #f4f4f4;
-        color: #67ac89;
-        display: block;
         padding: 1rem;
+        background: $color-primary-2;
+        color: $color-primary-4;
+        border-radius: 25px;
+        box-shadow: 8px 8px 12px;
+        display: block;
         text-decoration: none;
     }
 
     a:hover {
-        background: #e4e4e4;
+        background: $color-primary-1;
+        color: #000000;
+
+        p {
+            color: #000000;
+        }
 
     }
 
@@ -29,4 +44,5 @@
         font-size: .8rem;
         font-style: italic;
     }
+
 }

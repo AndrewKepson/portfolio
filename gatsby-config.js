@@ -26,6 +26,12 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Work Sans`, `Poppins`],
+      },
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
@@ -42,5 +48,6 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-postcss`,
   ],
 }
