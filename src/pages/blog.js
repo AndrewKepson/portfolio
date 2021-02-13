@@ -4,8 +4,6 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/head'
 
-import blogStyles from './blog.module.scss'
-
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -30,7 +28,7 @@ const BlogPage = () => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <div className="container flex -mx-4 justify-center">
+      <div className="container flex flex-wrap -mx-4 justify-center">
         {data.allMarkdownRemark.edges.map(post => (
           <div className="lg:w-4/12 md:w-6/12 p-4 w-full">
             <div className="bg-white shadow-lg">

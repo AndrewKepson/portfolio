@@ -24,9 +24,10 @@ const Header = () => {
         </div>
         <hr className="border-gray-400 border-opacity-50 mx-auto w-full" />
       </section>
-      <nav className="flex items-center flex-wrap px-4  container mx-auto py-2 justify-between">
+      <nav className="flex items-center flex-wrap px-4  container mx-auto py-2 justify-between text-lg">
         <button
           className="hover:text-purple-700 px-3 py-2 rounded text-purple-400 lg:hidden"
+          id="burger"
           data-name="nav-toggler"
           data-pg-ia='{"l":[{"name":"NabMenuToggler","trg":"click","a":{"l":[{"t":"^nav|[data-name=nav-menu]","l":[{"t":"set","p":0,"d":0,"l":{"class.remove":"hidden"}}]},{"t":"#gt# span:nth-of-type(1)","l":[{"t":"tween","p":0,"d":0.2,"l":{"rotationZ":45,"yPercent":300}}]},{"t":"#gt# span:nth-of-type(2)","l":[{"t":"tween","p":0,"d":0.2,"l":{"autoAlpha":0}}]},{"t":"#gt# span:nth-of-type(3)","l":[{"t":"tween","p":0,"d":0.2,"l":{"rotationZ":-45,"yPercent":-300}}]}]},"pdef":"true","trev":"true"}]}'
         >

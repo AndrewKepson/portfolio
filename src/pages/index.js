@@ -4,13 +4,17 @@ import Layout from '../components/layout'
 import SEO from '../components/head'
 import Typewriter from 'typewriter-effect'
 
-import homePageStyles from './home.module.scss'
-
 const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div className={homePageStyles.type}>
+      <div
+        style={{
+          fontFamily: 'Work Sans',
+          fontSize: '3rem',
+          lineHeight: '1.25',
+        }}
+      >
         <Typewriter
           onInit={typewriter => {
             typewriter
