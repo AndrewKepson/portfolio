@@ -1,5 +1,5 @@
 ---
-title: 'Learning JavaScript'
+title: 'Why Arathorn?'
 date: '2021-1-30'
 ---
 

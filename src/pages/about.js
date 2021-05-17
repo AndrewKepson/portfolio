@@ -4,28 +4,51 @@ import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import SEO from '../components/head'
+import Classes from '../styles/classes'
 
 const AboutPage = ({ data }) => {
+  const { about } = Classes.pages
   return (
     <Layout>
       <SEO title="About" />
-      <div class="flex flex-wrap -mx-4 -mb-4 md:mb-0">
-        <div class="w-full md:w-1/2 px-4 mb-4 md:mb-0">
-          <h2 className="text-5xl mb-6 leading-tight font-semibold font-heading">
-            I'm Andrew
-          </h2>
-          <p className="mb-8 text-gray-400 leading-relaxed">
-            I love the written word. I love building websites. And most of all,
-            I love combining them to tell your story. Passionate about
-            decentralization, digital marketing, and running on Colorado's
-            trails.
+      <div className={about.wrapper}>
+        <div className={about.textContainer}>
+          <h2 className={about.heading}>I'm Andrew</h2>
+          <p className={about.leadingRelaxed}>
+            I had my first brush with digital marketing at age 15, when my
+            friends and I posted a skateboarding video on YouTube and gained
+            over 100,000 views in the matter of a few weeks.
+          </p>
+          <p className={about.leadingRelaxed}>
+            That same year, I was introduced to web development, styling my
+            friends' MySpace pages in CSS, and building basic HTML pages on free
+            hosting platforms.
+          </p>
+          <p className={about.leadingRelaxed}>
+            At the time I was just having fun, and I didn't realize that I was
+            learning the skills that were quickly becoming the foundation of a
+            new generation of marketing, platform-building, and
+            decentralization.
+          </p>
+          <p className={about.leadingRelaxed}>
+            Like so many others, the pandemic forced me to rethink my life's
+            direction, and I decided to double down on my education, utilizing a
+            period of unemployment to commit to a web development bootcamp,
+            spending every day in the trenches with my fellow students as we
+            learned to build fully functioning web applications.
+          </p>
+          <p className={about.leadingRelaxed}>
+            Today, I am excited to be utilizing all of my skills and passions to
+            help businesses build their brands on the internet as an SEO Analyst
+            for the United States' leading digital marketing firm, SocialSEO.
           </p>
         </div>
-        <div class="w-full md:w-1/2 px-4 mb-4 md:mb-0">
+        <div className={about.imgContainer}>
           <Img
             fluid={data.file.childImageSharp.fluid}
+            loading="lazy"
             alt="Andrew"
-            className="rounded shadow-lg"
+            className="rounded shadow-2xl"
           />
         </div>
       </div>
@@ -36,12 +59,12 @@ const AboutPage = ({ data }) => {
 export default AboutPage
 
 export const query = graphql`
-  query {
-    file(relativePath: { eq: "images/802A3320.jpg" }) {
+  {
+    file(name: { eq: "802A3320" }) {
       absolutePath
       childImageSharp {
-        fluid(maxWidth: 2000) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
+        fluid(quality: 90) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

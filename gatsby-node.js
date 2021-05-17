@@ -16,14 +16,19 @@ module.exports.onCreateNode = ({ node, actions }) => {
 
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const blogTemplate = path.resolve(`./src/templates/blog.js`)
-  const res = await graphql(`
+  const getBlogs = await graphql(`
     query {
-      allMarkdownRemark {
+      allFile(filter: { dir: { regex: "/posts/" } }) {
         edges {
           node {
-            fields {
-              slug
+            childMarkdownRemark {
+              frontmatter {
+                date
+                title
+              }
+              fields {
+                slug
+              }
             }
           }
         }
@@ -31,12 +36,42 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  res.data.allMarkdownRemark.edges.forEach(edge => {
+  const getSamples = await graphql(`
+    query {
+      allFile(filter: { relativeDirectory: { eq: "samples" } }) {
+        edges {
+          node {
+            childMarkdownRemark {
+              frontmatter {
+                date
+                title
+              }
+              fields {
+                slug
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  getBlogs.data.allFile.edges.forEach(edge => {
     createPage({
-      component: blogTemplate,
-      path: `/blog/${edge.node.fields.slug}`,
+      component: path.resolve(`./src/templates/blog.js`),
+      path: `/blog/${edge.node.childMarkdownRemark.fields.slug}`,
       context: {
-        slug: edge.node.fields.slug,
+        slug: edge.node.childMarkdownRemark.fields.slug,
+      },
+    })
+  })
+
+  getSamples.data.allFile.edges.forEach(edge => {
+    createPage({
+      component: path.resolve(`./src/templates/sample.js`),
+      path: `/writing/${edge.node.childMarkdownRemark.fields.slug}`,
+      context: {
+        slug: edge.node.childMarkdownRemark.fields.slug,
       },
     })
   })

@@ -8,8 +8,15 @@ const NotFound = () => {
   return (
     <Layout>
       <SEO title="Page Not Found" />
-      <h1>Page Not Found</h1>
-      <Link to="/">Head Home</Link>
+      <div className="flex flex-col items-center justify-around">
+        <p>This is a</p>
+        <h1 className="text-5xl">404</h1>
+        <p>
+          That means you've tried to land on a page on the website that doesn't
+          exist!
+        </p>
+        <Link to="/">Head Home</Link>
+      </div>
     </Layout>
   )
 }
