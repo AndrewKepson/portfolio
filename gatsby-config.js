@@ -1,9 +1,3 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
-
 module.exports = {
   /* Your site config here */
   siteMetadata: {
@@ -14,19 +8,20 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        implementation: require('node-sass'),
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: 'src',
         path: `${__dirname}/src/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Work Sans`, `Poppins`],
+      },
+    },
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -35,12 +30,15 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 750,
+              maxWidth: 1200,
               linkImagesToOriginal: false,
             },
           },
         ],
       },
     },
+    `gatsby-transformer-json`,
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-image`,
   ],
 }
