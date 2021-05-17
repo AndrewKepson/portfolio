@@ -10,7 +10,7 @@ export default function DevelopmentCardContent({
   return (
     <div className={classes.cardContentWrapper}>
       <div className={classes.cardContent}>
-        <h3 className="text-3xl">{project}</h3>
+        <h3 className="text-3xl pb-3">{project}</h3>
         <p className={classes.description}>{description}</p>
         <DevelopmentCardFooter classes={classes} />
       </div>

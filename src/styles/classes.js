@@ -52,7 +52,7 @@ const Classes = {
         'lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8',
       cardImageWrapper: 'col-span-1 px-4 self-center',
       cardImage: 'rounded-tl-lg rounded-br-lg shadow-lg lg:shadow-md',
-      cardContentWrapper: 'mt-12 lg:m-0 lg:col-span-2 lg:pl-8',
+      cardContentWrapper: 'mt-6 lg:m-0 lg:col-span-2 lg:pl-8',
       cardContent:
         'mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:px-0 lg:py-20 lg:max-w-none',
       description: 'text-gray-800 font-medium text-2xl lg:text-xl',
