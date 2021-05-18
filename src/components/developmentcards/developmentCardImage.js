@@ -6,7 +6,7 @@ export default function DevelopmentCardImage({ classes, imgSrc }) {
     <div className={classes.cardImageWrapper}>
       <Img
         className={classes.cardImage}
-        fluid={imgSrc}
+        fluid={imgSrc.node.childImageSharp.fluid}
         loading="lazy"
         alt="Alt"
       />
