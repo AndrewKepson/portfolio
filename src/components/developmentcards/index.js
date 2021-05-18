@@ -24,7 +24,7 @@ const DevelopmentCards = () => {
             relativePath
             name
             childImageSharp {
-              fluid(quality: 90) {
+              fluid(quality: 70) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -33,17 +33,20 @@ const DevelopmentCards = () => {
       }
     }
   `)
-
   return (
     <div className="flex flex-col">
-      {CodePortfolio.map((project, i) => (
-        <DevelopmentCard
-          key={i}
-          classes={developmentCard}
-          imgSrc={data.allFile.edges[0].node.childImageSharp.fluid}
-          project={project}
-        />
-      ))}
+      {CodePortfolio.map((project, i) => {
+        return (
+          <DevelopmentCard
+            key={i}
+            classes={developmentCard}
+            imgSrc={data.allFile.edges.find(
+              edge => edge.node.name === project.photo
+            )}
+            project={project}
+          />
+        )
+      })}
     </div>
   )
 }

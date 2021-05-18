@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "Andrew Kepson Personal Portfolio",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
+  "description": "My personal portfolio website.",
+  "version": "2.001",
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
@@ -10,8 +10,7 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
   "dependencies": {
     "@headlessui/react": "^1.2.0",
@@ -31,12 +30,10 @@
     "gatsby-transformer-json": "^3.4.0",
     "gatsby-transformer-remark": "^2.14.0",
     "gatsby-transformer-sharp": "^2.12.0",
-    "node-sass": "^5.0.0",
     "postcss": "^8.2.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
-    "sass": "^1.32.4",
     "tailwindcss": "^2.0.2",
     "typewriter-effect": "^2.17.0"
   },
