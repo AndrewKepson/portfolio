@@ -7,7 +7,11 @@ export default function DevelopmentCard({ classes, imgSrc, project }) {
   return (
     <div className={classes.card}>
       <div className={classes.cardLayout}>
-        <DevelopmentCardImage classes={classes} imgSrc={imgSrc} />
+        <DevelopmentCardImage
+          classes={classes}
+          imgSrc={imgSrc}
+          altText={project.altText}
+        />
         <DevelopmentCardContent
           classes={classes}
           project={project.project}
