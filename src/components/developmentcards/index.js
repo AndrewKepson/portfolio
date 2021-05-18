@@ -33,16 +33,18 @@ const DevelopmentCards = () => {
       }
     }
   `)
+
   return (
     <div className="flex flex-col">
       {CodePortfolio.map((project, i) => {
+        const source = data.allFile.edges.find(
+          edge => edge.node.name === project.photo
+        )
         return (
           <DevelopmentCard
             key={i}
             classes={developmentCard}
-            imgSrc={data.allFile.edges.find(
-              edge => edge.node.name === project.photo
-            )}
+            imgSrc={source}
             project={project}
           />
         )
