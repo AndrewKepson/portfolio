@@ -58,9 +58,9 @@ const Classes = {
       description: 'text-gray-800 font-medium text-2xl lg:text-xl',
       footer: 'mt-6 flex flex-row flex-wrap justify-around items-center',
       deployedProjectButton:
-        'bg-gray-600 hover:bg-gray-500 w-full lg:mx-2 md:w-1/3 p-6 text-base font-medium text-gray-100 transition-colors duration-150',
+        'bg-gray-600 hover:bg-gray-500 w-full lg:mx-2 m-2 p-6 flex flex-none lg:flex-1 justify-center text-base font-medium text-gray-100 transition-colors duration-150 cursor-pointer',
       githubProjectButton:
-        'bg-gray-500 hover:bg-gray-600 w-full md:mx-2 md:w-1/3 mt-4 md:mt-0 p-6 text-base font-medium text-gray-100 transition-colors duration-150',
+        'bg-gray-500 hover:bg-gray-600 w-full md:mx-2 m-2 p-6 flex flex-none lg:flex-1 justify-center text-base font-medium text-gray-100 transition-colors duration-150 cursor-pointer',
     },
     writingSample: {
       sampleWrapper: 'flex-1',
