@@ -77,6 +77,20 @@ const Classes = {
       content: 'grid gap-16 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12',
     },
   },
+  templates: {
+    blog: {
+      wrapper:
+        'flex flex-col mx-5 md:mx-28 lg:mx-44 xl:mx-60 relative py-6 overflow-hidden',
+      h1: 'mb-5 text-center text-7xl md:text-6xl',
+      content: 'my-8  md:mt-12 lg:mt-14 text-left text-2xl md:text-xl',
+      date: 'self-end text-lg',
+    },
+    sample: {
+      wrapper:
+        'flex flex-col mx-4 md:mx-28 lg:mx-36 items-center text-2xl lg:text-xl',
+      h1: 'text-5xl md:text-6xl lg:text-7xl py-4 lg:py-8 md:text-center',
+    },
+  },
 }
 
 export default Classes
