@@ -12,11 +12,7 @@ export default function DevelopmentCard({ classes, imgSrc, project }) {
           imgSrc={imgSrc}
           altText={project.altText}
         />
-        <DevelopmentCardContent
-          classes={classes}
-          project={project.project}
-          description={project.description}
-        />
+        <DevelopmentCardContent classes={classes} project={project} />
       </div>
     </div>
   )

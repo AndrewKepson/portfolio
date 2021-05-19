@@ -1,7 +1,7 @@
 const ServicesOffered = [
   'Web Design or Development',
   'Blogging or Copywriting',
-  'Blockchain Development',
+  'Smart Contract Development',
   'Other',
 ]
 
