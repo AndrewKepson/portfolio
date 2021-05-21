@@ -3,7 +3,7 @@ const Classes = {
     about: {
       wrapper:
         'flex flex-wrap items-center -mb-4 md:mb-0 px-4 lg:pt-12 lg:px-12 text-gray-500',
-      textContainer: 'w-full lg:w-1/2 px-4 mb-4 md:mb-0 text-xl lg:text-lg',
+      textContainer: 'w-full lg:w-1/2 px-20 mb-4 md:mb-0 text-xl lg:text-lg',
       heading:
         'text-5xl text-gray-600 mb-6 leading-tight font-semibold font-heading',
       leadingRelaxed: 'mb-4 leading-relaxed',

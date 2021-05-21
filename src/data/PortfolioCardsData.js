@@ -8,7 +8,7 @@ export const portfolioCardsData = [
   {
     portfolio: `Content Writing`,
     description: `Writing was my first love. From poetry and short stories to
-        copywriting and blogging for some of the world's largest brands.`,
+        copywriting and blogging for some of the world's largest brands, my pen has always been there for me.`,
     href: `/writing`,
   },
   {

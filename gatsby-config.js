@@ -20,7 +20,12 @@ module.exports = {
         fonts: [`Work Sans`, `Poppins`],
       },
     },
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        icon: './static/favicon.ico',
+      },
+    },
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
