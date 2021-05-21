@@ -32,10 +32,10 @@ const AboutPage = ({ data }) => {
           </p>
           <p className={about.leadingRelaxed}>
             Like so many others, the pandemic forced me to rethink my life's
-            direction, and I decided to double down on my education, utilizing a
-            period of unemployment to commit to a web development bootcamp,
-            spending every day in the trenches with my fellow students as we
-            learned to build fully functioning web applications.
+            direction, and I decided to double down on my education, committing
+            to a web development bootcamp, spending every day in the trenches
+            with my fellow students as we learned to build fully functioning web
+            applications.
           </p>
           <p className={about.leadingRelaxed}>
             Today, I am excited to be utilizing all of my skills and passions to
