@@ -30,7 +30,7 @@ export default function HeaderContent() {
             <Popover.Panel
               focus
               static
-              className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+              className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
             >
               <MobileNav />
             </Popover.Panel>
