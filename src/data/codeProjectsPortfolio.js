@@ -1,5 +1,15 @@
 export const CodePortfolio = [
   {
+    project: 'Arcane Realty Investors',
+    github:
+      'https://github.com/AndrewKepson/Tailwind-Landing-Pages/blob/master/src/pages/arcane-realty-investors.js',
+    deployment:
+      'https://xenodochial-hamilton-5bed45.netlify.app/arcane-realty-investors',
+    description: `This is a landing page for a fictional investment firm, styled with Tailwind CSS and using Headless UI components.`,
+    photo: 'Arcane-Realty-Investors',
+    altText: 'Arcane Realty Investors landing page',
+  },
+  {
     project: 'IT Logging Application',
     github: 'https://github.com/AndrewKepson/logging-application-react-redux',
     description: `This web application allows users to log and process requests for IT assistance. It is built with React.js, Materialize CSS, and React-Redux for state management.`,
