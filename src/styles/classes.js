@@ -2,8 +2,9 @@ const Classes = {
   pages: {
     about: {
       wrapper:
-        'flex flex-wrap items-center -mb-4 md:mb-0 px-4 lg:pt-12 lg:px-12 text-gray-500',
-      textContainer: 'w-full lg:w-1/2 px-20 mb-4 md:mb-0 text-xl lg:text-lg',
+        'flex flex-wrap items-center -mb-4 md:mb-0 lg:pt-12 lg:px-12 text-gray-500',
+      textContainer:
+        'w-full lg:w-1/2 px-2 md:px-12 lg:px-20 mb-4 md:mb-0 text-xl lg:text-lg',
       heading:
         'text-5xl text-gray-600 mb-6 leading-tight font-semibold font-heading',
       leadingRelaxed: 'mb-4 leading-relaxed',
@@ -80,14 +81,14 @@ const Classes = {
   templates: {
     blog: {
       wrapper:
-        'flex flex-col mx-5 md:mx-28 lg:mx-44 xl:mx-60 relative py-6 overflow-hidden',
+        'flex flex-col mx-3 md:mx-20 lg:mx-48 xl:mx-60 relative py-6 overflow-hidden',
       h1: 'mb-5 text-center text-7xl md:text-6xl',
       content: 'my-8  md:mt-12 lg:mt-14 text-left text-2xl md:text-xl',
       date: 'self-end text-lg',
     },
     sample: {
       wrapper:
-        'flex flex-col mx-4 md:mx-28 lg:mx-36 items-center text-2xl lg:text-xl',
+        'flex flex-col mx-3 md:mx-20 lg:mx-48 xl:mx-60 items-center text-2xl md:text-xl',
       h1: 'text-5xl md:text-6xl lg:text-7xl py-4 lg:py-8 md:text-center',
     },
   },
