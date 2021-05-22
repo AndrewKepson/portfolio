@@ -6,7 +6,10 @@ import BlogCards from '../components/blogcards'
 
 const BlogPage = () => (
   <Layout>
-    <SEO title="Blog" />
+    <SEO
+      title="Blog"
+      description="Read the thoughts Andrew has over the months and years."
+    />
     <BlogCards />
   </Layout>
 )

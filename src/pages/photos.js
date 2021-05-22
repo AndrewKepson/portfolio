@@ -6,7 +6,10 @@ import Gallery from '../components/gallery'
 
 const Photos = () => (
   <Layout>
-    <SEO title="Photos" />
+    <SEO
+      title="Photos"
+      description="Thank you for viewing my portfolio of photos. I am not a photographer, but I have been to some beautiful places."
+    />
     <Gallery />
   </Layout>
 )

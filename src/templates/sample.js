@@ -5,7 +5,9 @@ import Layout from '../components/layout'
 import SEO from '../components/head'
 
 import Classes from '../styles/classes'
-const { sample } = Classes.templates
+const {
+  sample: { wrapper, h1 },
+} = Classes.templates
 
 export const query = graphql`
   query($slug: String!) {
@@ -22,8 +24,8 @@ const Sample = ({ data: { markdownRemark } }) => {
   return (
     <Layout>
       <SEO title={markdownRemark.frontmatter.title} />
-      <div className={sample.wrapper}>
-        <h1 className={sample.h1}>{markdownRemark.frontmatter.title}</h1>
+      <div className={wrapper}>
+        <h1 className={h1}>{markdownRemark.frontmatter.title}</h1>
         <p className="py-4 lg:py-12">{markdownRemark.frontmatter.date}</p>
         <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
       </div>

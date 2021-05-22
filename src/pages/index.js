@@ -7,7 +7,10 @@ import Typewriter from 'typewriter-effect'
 const IndexPage = () => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO
+        title="Home"
+        description="Andrew Kepson is a digital marketing professional based in Colorado. In addition to SEO, he also enjoys trail running, reading, and occasional blogging."
+      />
       <div
         style={{
           fontFamily: 'Work Sans',

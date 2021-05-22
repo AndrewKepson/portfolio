@@ -10,7 +10,7 @@ export default function DevelopmentCardFooter({ classes, project }) {
       </div>
       <div className={classes.githubProjectButton}>
         <a href={project.github} target="_blank" rel="noreferrer">
-          View Code on Github
+          View Code on GitHub
         </a>
       </div>
     </footer>

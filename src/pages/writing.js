@@ -6,7 +6,10 @@ import WritingSamples from '../components/writingsamples'
 
 const Writing = () => (
   <Layout>
-    <SEO title="Writing" />
+    <SEO
+      title="Writing"
+      description="Writing was my first love. I initially chose marketing as a career path because I wanted to find a way to write for a living. Thank you for reading my samples."
+    />
     <WritingSamples />
   </Layout>
 )
