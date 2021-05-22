@@ -6,6 +6,7 @@ export default function LinkedIn() {
       href="https://www.linkedin.com/in/andrewkepson/"
       className="hover:text-purple-400"
       target="/blank"
+      rel="noreferrer"
     >
       {' '}
       {/* LinkedIn Logo SVG */}

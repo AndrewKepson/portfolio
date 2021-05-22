@@ -6,6 +6,7 @@ export default function Github() {
       href="https://github.com/AndrewKepson"
       className="hover:text-purple-400"
       target="/blank"
+      rel="noreferrer"
     >
       {' '}
       {/* Github Logo SVG */}
