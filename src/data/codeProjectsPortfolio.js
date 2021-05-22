@@ -2,7 +2,7 @@ export const CodePortfolio = [
   {
     project: 'IT Logging Application',
     github: 'https://github.com/AndrewKepson/logging-application-react-redux',
-    description: `This web application allows users to log and process requests for IT assistance. It is build with React.js, Materialize CSS, and React-Redux for state management.`,
+    description: `This web application allows users to log and process requests for IT assistance. It is built with React.js, Materialize CSS, and React-Redux for state management.`,
     photo: 'IT-Logger-Application',
     altText: 'Logging application using React.js and React-Redux',
   },
