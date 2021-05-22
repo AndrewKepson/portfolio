@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
 import Classes from '../../styles/classes'
@@ -24,4 +25,11 @@ export default function BlogCard({ slug, title, date, excerpt }) {
       </div>
     </div>
   )
+}
+
+BlogCard.propTypes = {
+  slug: PropTypes.string,
+  title: PropTypes.string,
+  date: PropTypes.string,
+  excerpt: PropTypes.string,
 }

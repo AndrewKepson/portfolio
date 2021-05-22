@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const NameInput = ({ labelClass, inputClass, value, onChange }) => (
   <div className="mb-6">
@@ -13,5 +14,12 @@ const NameInput = ({ labelClass, inputClass, value, onChange }) => (
     />
   </div>
 )
+
+NameInput.propTypes = {
+  labelClass: PropTypes.string.isRequired,
+  inputClass: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+}
 
 export default NameInput

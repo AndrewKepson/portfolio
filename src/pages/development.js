@@ -9,7 +9,6 @@ const Development = () => {
     <Layout>
       <div>
         <SEO title="Development" />
-        <h1 className="mb-5">Under Development</h1>
         <DevelopmentCards />
       </div>
     </Layout>

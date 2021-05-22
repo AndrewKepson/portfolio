@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const EmailInput = ({ labelClass, inputClass, value, onChange }) => (
   <div className="mb-6">
@@ -14,5 +15,12 @@ const EmailInput = ({ labelClass, inputClass, value, onChange }) => (
     />
   </div>
 )
+
+EmailInput.propTypes = {
+  labelClass: PropTypes.string.isRequired,
+  inputClass: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+}
 
 export default EmailInput

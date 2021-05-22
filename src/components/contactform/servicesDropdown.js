@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import ServicesOffered from '../../data/servicesOffered'
 
 import DropdownOption from './dropdownOption'
@@ -17,5 +18,11 @@ const ServicesDropdown = ({ labelClass, selectClass, wrapperClass }) => (
     </div>
   </div>
 )
+
+ServicesDropdown.propTypes = {
+  labelClass: PropTypes.string.isRequired,
+  selectClass: PropTypes.string.isRequired,
+  wrapperClass: PropTypes.string.isRequired,
+}
 
 export default ServicesDropdown
