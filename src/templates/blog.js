@@ -6,7 +6,7 @@ import SEO from '../components/head'
 
 import Classes from '../styles/classes'
 const {
-  blog: { wrapper, h1, content, date },
+  blog: { wrapper, h1, contentWrapper, content, date },
 } = Classes.templates
 
 export const query = graphql`
@@ -27,11 +27,13 @@ const Blog = ({ data: { markdownRemark } }) => {
       <SEO title={markdownRemark.frontmatter.title} />
       <div className={wrapper}>
         <h1 className={h1}>{markdownRemark.frontmatter.title}</h1>
-        <div
-          className={content}
-          dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
-        />
-        <p className={date}>Published {markdownRemark.frontmatter.date}</p>
+        <div className={contentWrapper}>
+          <div
+            className={content}
+            dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
+          />
+          <p className={date}>Published {markdownRemark.frontmatter.date}</p>
+        </div>
       </div>
     </Layout>
   )

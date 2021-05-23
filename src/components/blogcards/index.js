@@ -12,6 +12,13 @@ const BlogCards = () => {
               frontmatter {
                 date
                 title
+                featuredImage {
+                  childImageSharp {
+                    fluid(maxWidth: 200) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
               }
               html
               excerpt
@@ -33,6 +40,9 @@ const BlogCards = () => {
           <BlogCard
             key={post.node.childMarkdownRemark.id}
             slug={`/blog/${post.node.childMarkdownRemark.fields.slug}`}
+            featuredImage={
+              post.node.childMarkdownRemark.frontmatter.featuredImage
+            }
             title={post.node.childMarkdownRemark.frontmatter.title}
             date={post.node.childMarkdownRemark.frontmatter.date}
             excerpt={post.node.childMarkdownRemark.excerpt}
