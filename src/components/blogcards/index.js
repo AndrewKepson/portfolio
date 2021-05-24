@@ -14,7 +14,7 @@ const BlogCards = () => {
                 title
                 featuredImage {
                   childImageSharp {
-                    fluid(maxWidth: 200) {
+                    fluid {
                       ...GatsbyImageSharpFluid
                     }
                   }
