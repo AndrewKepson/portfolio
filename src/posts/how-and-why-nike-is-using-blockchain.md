@@ -27,8 +27,8 @@ Nike has been clear that their intention is to <a class="text-purple-600 hover:t
 
 ![Cryptography](../images/blog-images/nike-blockchain/cryptography-number.jpeg)
 
-<p class="font-semibold text-center text-lg">Cryptography</p>
-<br><br>
+<p class="font-semibold text-center text-lg">Cryptography Is Essential to Maintaining a Blockchain's Integrity</p>
+<br>
 
 <h3 class="text-gray-600 text-4xl">How Can Blockchain Solve the Problem?</h3><br>
 

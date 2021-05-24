@@ -85,7 +85,7 @@ const Classes = {
       h1: 'text-gray-800 mb-5 text-center text-5xl md:text-6xl',
       h3: 'text-4xl text-bold',
       content: 'my-8  md:mt-12 lg:mt-14',
-      date: 'self-end text-lg',
+      date: 'lg:px-44 self-end text-lg',
     },
     sample: {
       wrapper:
