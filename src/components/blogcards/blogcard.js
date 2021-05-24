@@ -1,19 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Classes from '../../styles/classes'
 const { blogCard } = Classes.components
 
-export default function BlogCard({ slug, title, date, excerpt }) {
+export default function BlogCard({
+  slug,
+  featuredImage,
+  title,
+  date,
+  excerpt,
+}) {
   return (
     <div className={blogCard.cardContainer}>
       <div className={blogCard.card}>
         <Link to={slug}>
-          <img
-            src="https://images.unsplash.com/photo-1468818438311-4bab781ab9b8?ixid=MXwyMDkyMnwwfDF8c2VhcmNofDI4fHx0cmF2ZWx8ZW58MHx8fA&ixlib=rb-1.2.1q=85&fm=jpg&crop=faces&cs=srgb&w=350&h=240&fit=crop"
-            className={blogCard.img}
-          />
+          <Img fluid={featuredImage?.childImageSharp.fluid} />
         </Link>
         <div className="p-4">
           <Link to={slug} className={blogCard.slugStyle}>
@@ -29,6 +33,7 @@ export default function BlogCard({ slug, title, date, excerpt }) {
 
 BlogCard.propTypes = {
   slug: PropTypes.string,
+  featuredImage: PropTypes.object,
   title: PropTypes.string,
   date: PropTypes.string,
   excerpt: PropTypes.string,

@@ -82,8 +82,9 @@ const Classes = {
     blog: {
       wrapper:
         'flex flex-col mx-3 md:mx-20 lg:mx-48 xl:mx-60 relative py-6 overflow-hidden',
-      h1: 'mb-5 text-center text-7xl md:text-6xl',
-      content: 'my-8  md:mt-12 lg:mt-14 text-left text-2xl md:text-xl',
+      h1: 'text-gray-800 mb-5 text-center text-5xl md:text-6xl',
+      h3: 'text-4xl text-bold',
+      content: 'my-8  md:mt-12 lg:mt-14',
       date: 'self-end text-lg',
     },
     sample: {

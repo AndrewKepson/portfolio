@@ -5,7 +5,9 @@ import Layout from '../components/layout'
 import SEO from '../components/head'
 
 import Classes from '../styles/classes'
-const { blog } = Classes.templates
+const {
+  blog: { wrapper, h1, contentWrapper, content, date },
+} = Classes.templates
 
 export const query = graphql`
   query($slug: String!) {
@@ -19,19 +21,19 @@ export const query = graphql`
   }
 `
 
-const Blog = ({ data }) => {
+const Blog = ({ data: { markdownRemark } }) => {
   return (
     <Layout>
-      <SEO title={data.markdownRemark.frontmatter.title} />
-      <div className={blog.wrapper}>
-        <h1 className={blog.h1}>{data.markdownRemark.frontmatter.title}</h1>
-        <div
-          className={blog.content}
-          dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
-        />
-        <p className={blog.date}>
-          Published {data.markdownRemark.frontmatter.date}
-        </p>
+      <SEO title={markdownRemark.frontmatter.title} />
+      <div className={wrapper}>
+        <h1 className={h1}>{markdownRemark.frontmatter.title}</h1>
+        <div className={contentWrapper}>
+          <div
+            className={content}
+            dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
+          />
+          <p className={date}>Published {markdownRemark.frontmatter.date}</p>
+        </div>
       </div>
     </Layout>
   )

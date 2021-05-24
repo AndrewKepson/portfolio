@@ -10,7 +10,10 @@ const AboutPage = ({ data }) => {
   const { about } = Classes.pages
   return (
     <Layout>
-      <SEO title="About" />
+      <SEO
+        title="About"
+        description="Andrew Kepson is a digital marketing professional focused on technical SEO for modern websites built in JavaScript frameworks, based in Colorado. Learn more here."
+      />
       <div className={about.wrapper}>
         <div className={about.textContainer}>
           <h2 className={about.heading}>I'm Andrew</h2>
