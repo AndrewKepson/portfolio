@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 export default function Copyright({ author }) {
   return (
@@ -12,6 +13,9 @@ export default function Copyright({ author }) {
       >
         View the Code for This Website
       </a>
+      <Link className="hover:text-purple-400" to="/html-sitemap">
+        HTML Sitemap
+      </Link>
     </div>
   )
 }
