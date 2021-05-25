@@ -16,15 +16,16 @@ export default function BlogCard({
   return (
     <div className={blogCard.cardContainer}>
       <div className={blogCard.card}>
-        <Link to={slug}>
-          <Img fluid={featuredImage?.childImageSharp.fluid} />
-        </Link>
-        <div className="p-4">
+        <Img
+          className={blogCard.img}
+          fluid={featuredImage?.childImageSharp.fluid}
+        />
+        <div className={blogCard.content}>
           <Link to={slug} className={blogCard.slugStyle}>
             <h5 className={blogCard.anchorText}>{title}</h5>
           </Link>
           <h6 className={blogCard.date}>{date}</h6>
-          <p>{excerpt}</p>
+          <p className={blogCard.excerpt}>{excerpt}</p>
         </div>
       </div>
     </div>

@@ -33,16 +33,20 @@ const Classes = {
   },
   components: {
     blogCard: {
-      cardContainer: 'lg:w-4/12 md:w-6/12 p-4 w-full',
-      card: 'bg-gray-100 shadow-lg',
-      img: 'w-full',
+      cardContainer:
+        'flex items-stretch content-between w-full md:w-6/12 lg:w-4/12 p-6',
+      card: 'flex flex-col bg-gray-100 shadow-lg',
+      img: 'h-1/2 w-full',
+      content: 'p-3 md:px-6 pt-3 md:pt-6',
       slugStyle: 'block hover:text-purple-400 mb-2 text-gray-800',
-      anchorText: 'font-bold leading-tight text-xl',
+      anchorText: 'font-bold leading-tight text-lg md:text-xl',
       date: 'font-semibold leading-tight mb-2 text-gray-600 text-xs',
+      excerpt: 'text-xs md:text-lg',
     },
     portfolioCard: {
       cardWrapper: 'w-full p-4 lg:w-1/3',
-      card: 'bg-gray-100 h-full px-6 py-16 rounded-lg shadow-lg',
+      card:
+        'flex flex-col justify-between bg-gray-100 h-full px-6 py-16 rounded-lg shadow-lg',
       header: 'font-bold mb-2 text-gray-900 text-xl',
       content: 'mb-4 text-lg',
       anchorText: 'text-purple-400 hover:text-purple-600',
