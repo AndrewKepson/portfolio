@@ -15,6 +15,7 @@ export const query = graphql`
       frontmatter {
         title
         date
+        canonical
       }
       html
     }
@@ -24,7 +25,10 @@ export const query = graphql`
 const Blog = ({ data: { markdownRemark } }) => {
   return (
     <Layout>
-      <SEO title={markdownRemark.frontmatter.title} />
+      <SEO
+        title={markdownRemark.frontmatter.title}
+        canonical={markdownRemark.frontmatter.canonical || null}
+      />
       <div className={wrapper}>
         <h1 className={h1}>{markdownRemark.frontmatter.title}</h1>
         <div className={contentWrapper}>
