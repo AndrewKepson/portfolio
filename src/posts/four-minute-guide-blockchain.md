@@ -1,6 +1,7 @@
 ---
 title: A Four Minute Guide to Understanding Blockchain
 date: December 30, 2019
+sortDate: 2019-12-30
 featuredImage: ../images/blog-images/four-minute-blockchain/block-clock.jpeg
 canonical: https://medium.com/@andrewkepson/7-people-to-follow-if-youre-interested-in-blockchain-681ea98bc92f
 ---

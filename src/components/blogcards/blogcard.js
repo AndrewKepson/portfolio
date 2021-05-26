@@ -17,6 +17,7 @@ export default function BlogCard({
     <div className={blogCard.cardContainer}>
       <div className={blogCard.card}>
         <Img
+          alt={title}
           className={blogCard.img}
           fluid={featuredImage?.childImageSharp.fluid}
         />
