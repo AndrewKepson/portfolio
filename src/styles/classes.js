@@ -46,7 +46,7 @@ const Classes = {
     portfolioCard: {
       cardWrapper: 'w-full p-4 lg:w-1/3',
       card:
-        'flex flex-col justify-between bg-gray-100 h-full px-6 py-16 rounded-lg shadow-lg',
+        'flex flex-col justify-between place-content-around bg-gray-100 h-full px-6 py-16 rounded-lg shadow-lg',
       header: 'font-bold mb-2 text-gray-900 text-xl',
       content: 'mb-4 text-lg',
       anchorText: 'text-purple-400 hover:text-purple-600',
@@ -60,7 +60,7 @@ const Classes = {
       cardContentWrapper: 'mt-6 lg:m-0 lg:col-span-2 lg:pl-8',
       cardContent:
         'mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:px-0 lg:py-20 lg:max-w-none',
-      description: 'text-gray-800 font-medium text-2xl lg:text-xl',
+      description: 'text-gray-800 font-medium text-lg md:text-xl',
       footer: 'mt-6 flex flex-row flex-wrap justify-around items-center',
       deployedProjectButton:
         'bg-gray-600 hover:bg-gray-500 w-full lg:mx-2 m-2 p-6 flex flex-none lg:flex-1 justify-center text-base font-medium text-gray-100 transition-colors duration-150 cursor-pointer',
