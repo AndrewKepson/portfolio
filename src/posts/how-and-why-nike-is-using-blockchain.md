@@ -1,6 +1,7 @@
 ---
 title: How and Why Nike is Using Blockchain to Disrupt the Sneaker Industry
 date: January 13, 2020
+sortDate: 2020-01-13
 featuredImage: ../images/blog-images/nike-blockchain/nike-shoes-cover.jpeg
 canonical: https://medium.com/@andrewkepson/how-why-nike-is-using-blockchain-to-disrupt-the-sneaker-industry-c09ee68f7ee0
 ---

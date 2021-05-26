@@ -9,7 +9,7 @@ const NameInput = ({ labelClass, inputClass, value, onChange }) => (
       type="text"
       name="fullName"
       value={value}
-      placeholder="Write a text"
+      placeholder="Name"
       onChange={onChange}
     />
   </div>

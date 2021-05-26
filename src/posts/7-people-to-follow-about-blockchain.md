@@ -1,6 +1,7 @@
 ---
 title: 7 People To Follow if You’re Interested in Blockchain
 date: January 8, 2020
+sortDate: 2020-01-08
 featuredImage: ../images/blog-images/7-people-blockchain/nodes-cover.png
 canonical: https://medium.com/@andrewkepson/7-people-to-follow-if-youre-interested-in-blockchain-681ea98bc92f
 ---
