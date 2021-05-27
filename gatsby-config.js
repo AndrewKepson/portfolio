@@ -45,5 +45,7 @@ module.exports = {
     `gatsby-transformer-json`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-instagram-embed`,
+    `gatsby-plugin-twitter`,
   ],
 }

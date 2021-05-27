@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 
 const HTMLSitemap = () => (
   <Layout>
-    <div className="h-full grid grid-cols-1 place-content-around text-2xl">
+    <div className="h-full grid grid-cols-1 place-content-around text-xl">
       <ul>
         <li>
           <Link className="hover:text-purple-400" to="/">
@@ -50,7 +50,7 @@ const HTMLSitemap = () => (
         </li>
       </ul>
 
-      <h3 className="pt-10 pb-5">Blog Posts:</h3>
+      <h3 className="pt-10 pb-5 font-semibold">Blog Posts:</h3>
       <ul>
         <li>
           <Link
