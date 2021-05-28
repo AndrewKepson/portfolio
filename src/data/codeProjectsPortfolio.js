@@ -10,6 +10,17 @@ export const CodePortfolio = [
     altText: 'Arcane Realty Investors landing page',
   },
   {
+    project: 'Responsive Ecommerce Product Page',
+    github:
+      'https://github.com/AndrewKepson/Tailwind-Landing-Pages/blob/master/src/pages/shoe-landing-page-1.js',
+    deployment:
+      'https://xenodochial-hamilton-5bed45.netlify.app/shoe-landing-page-1/',
+    description:
+      'Site speed is always important, but in Ecommerce this is the difference between gaining conversions or losing them to your competitor.',
+    photo: 'shoe-landing-page-1',
+    altText: 'Responsive ecommerce product page built with Gatsby.js',
+  },
+  {
     project: 'IT Logging Application',
     github: 'https://github.com/AndrewKepson/logging-application-react-redux',
     deployment:
