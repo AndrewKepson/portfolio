@@ -47,5 +47,15 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-instagram-embed`,
     `gatsby-plugin-twitter`,
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ['G-MCF0080YYY'],
+        pluginConfig: {
+          head: true,
+          respectDNT: true,
+        },
+      },
+    },
   ],
 }
