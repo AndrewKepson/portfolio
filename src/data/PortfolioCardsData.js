@@ -6,10 +6,9 @@ export const portfolioCardsData = [
     href: `/development`,
   },
   {
-    portfolio: `Content Writing`,
-    description: `Writing was my first love. From poetry and short stories to
-        copywriting and blogging for some of the world's largest brands, my pen has always been there for me.`,
-    href: `/writing`,
+    portfolio: `Blog`,
+    description: `Writing was my first love. I'm interested in topics in blockchain, digital marketing, and web development.`,
+    href: `/blog`,
   },
   {
     portfolio: `Photography & Digital Art`,

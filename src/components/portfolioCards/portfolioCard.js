@@ -11,7 +11,7 @@ const { portfolioCard } = Classes.components
 export default function PortfolioCard({ portfolio, description, href }) {
   function chooseSvg(portfolio) {
     if (portfolio === 'Development') return <DevSVG />
-    if (portfolio === 'Content Writing') return <WritingSVG />
+    if (portfolio === 'Blog') return <WritingSVG />
     if (portfolio === 'Photography & Digital Art') return <ArtSVG />
   }
 
