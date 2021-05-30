@@ -10,15 +10,15 @@ export const CodePortfolio = [
     altText: 'Arcane Realty Investors landing page',
   },
   {
-    project: 'Responsive Ecommerce Product Page',
+    project: 'Evergreen Real Estate',
     github:
-      'https://github.com/AndrewKepson/Tailwind-Landing-Pages/blob/master/src/pages/shoe-landing-page-1.js',
+      'https://github.com/AndrewKepson/Tailwind-Landing-Pages/blob/master/src/pages/evergreen-real-estate.js',
     deployment:
-      'https://xenodochial-hamilton-5bed45.netlify.app/shoe-landing-page-1/',
+      'https://xenodochial-hamilton-5bed45.netlify.app/evergreen-real-estate',
     description:
-      'Site speed is always important, but in Ecommerce this is the difference between gaining conversions or losing them to your competitor.',
-    photo: 'shoe-landing-page-1',
-    altText: 'Responsive ecommerce product page built with Gatsby.js',
+      'This home page imagines a real estate agency in Colorado Springs that seeks to provide home buyers with answers to common questions while driving them to convert by joining their email list.',
+    photo: 'evergreen-real-estate',
+    altText: 'Evergreen Real Estate Front Page',
   },
   {
     project: 'IT Logging Application',
@@ -38,15 +38,6 @@ export const CodePortfolio = [
       'This simple React web application allows the user to manage a list of users and to find a user using the text input as a filter.',
     photo: 'employee-management-application',
     altText: 'Employee management application built with React.js',
-  },
-  {
-    project: 'Interplanetary Travel Planner',
-    github: 'https://github.com/AndrewKepson/interplanetary-travel-planner',
-    deployment: 'https://interplanetarytravel.space/',
-    description:
-      'Book your first flight to space on the Interplanetary Travel Planner! This full stack web application was built with Express.js, MySQL (Sequelize), and Handlebars.js.',
-    photo: 'Interplanetary-Travel-Planner',
-    altText: 'Interplanetary Travel Planner Full Stack Web Application',
   },
   {
     project: 'Note Taking Application',
