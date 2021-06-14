@@ -9,30 +9,24 @@ import Classes from '../../styles/classes'
 const { developmentCard } = Classes.components
 
 const DevelopmentCards = () => {
-  const data = useStaticQuery(graphql`
-    query projectPhotos {
-      allFile(
-        filter: {
-          sourceInstanceName: { eq: "src" }
-          relativePath: { regex: "/images/development-project-images/" }
-        }
-      ) {
-        edges {
-          node {
-            id
-            absolutePath
-            relativePath
-            name
-            childImageSharp {
-              fluid(quality: 70) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
+  const data = useStaticQuery(graphql`query projectPhotos {
+  allFile(
+    filter: {sourceInstanceName: {eq: "src"}, relativePath: {regex: "/images/development-project-images/"}}
+  ) {
+    edges {
+      node {
+        id
+        absolutePath
+        relativePath
+        name
+        childImageSharp {
+          gatsbyImageData(quality: 70, layout: FULL_WIDTH)
         }
       }
     }
-  `)
+  }
+}
+`)
 
   return (
     <div className="flex flex-col">

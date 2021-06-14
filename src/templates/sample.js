@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
-import SEO from '../components/head'
+import Seo from '../components/head'
 
 import Classes from '../styles/classes'
 const {
@@ -23,7 +23,7 @@ export const query = graphql`
 const Sample = ({ data: { markdownRemark } }) => {
   return (
     <Layout>
-      <SEO title={markdownRemark.frontmatter.title} />
+      <Seo title={markdownRemark.frontmatter.title} />
       <div className={wrapper}>
         <h1 className={h1}>{markdownRemark.frontmatter.title}</h1>
         <p className="py-4 lg:py-12">{markdownRemark.frontmatter.date}</p>

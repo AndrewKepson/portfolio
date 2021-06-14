@@ -1,16 +1,16 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 import Layout from '../components/layout'
-import SEO from '../components/head'
+import Seo from '../components/head'
 import Classes from '../styles/classes'
 
 const AboutPage = ({ data }) => {
   const { about } = Classes.pages
   return (
     <Layout>
-      <SEO
+      <Seo
         title="About"
         description="Andrew Kepson is a digital marketing professional focused on technical SEO for modern websites built in JavaScript frameworks, based in Colorado. Learn more here."
       />
@@ -23,8 +23,8 @@ const AboutPage = ({ data }) => {
           </p>
         </div>
         <div className={about.imgContainer}>
-          <Img
-            fluid={data.file.childImageSharp.fluid}
+          <GatsbyImage
+            image={data.file.childImageSharp.gatsbyImageData}
             loading="lazy"
             alt="Andrew"
             className="rounded shadow-2xl"
@@ -42,9 +42,11 @@ export const query = graphql`
     file(name: { eq: "802A3320" }) {
       absolutePath
       childImageSharp {
-        fluid(quality: 90) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(
+          quality: 60
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
   }

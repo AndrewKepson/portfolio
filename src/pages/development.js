@@ -1,14 +1,14 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-import SEO from '../components/head'
+import Seo from '../components/head'
 import DevelopmentCards from '../components/developmentcards'
 
 const Development = () => {
   return (
     <Layout>
       <div>
-        <SEO
+        <Seo
           title="Development"
           description="Thank you for viewing my development portfolio. My primary web development technologies include React, Node, MongoDb, and Tailwind CSS."
         />
