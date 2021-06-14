@@ -1,15 +1,14 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export default function DevelopmentCardImage({ classes, imgSrc, altText }) {
   return (
     <div className={classes.cardImageWrapper}>
-      <Img
+      <GatsbyImage
+        image={imgSrc.node.childImageSharp.gatsbyImageData}
         className={classes.cardImage}
-        fluid={imgSrc.node.childImageSharp.fluid}
         loading="lazy"
-        alt={altText}
-      />
+        alt={altText} />
     </div>
-  )
+  );
 }

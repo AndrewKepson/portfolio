@@ -1,13 +1,13 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-import SEO from '../components/head'
+import Seo from '../components/head'
 import Typewriter from 'typewriter-effect'
 
 const IndexPage = () => {
   return (
     <Layout>
-      <SEO
+      <Seo
         title="Home"
         description="Andrew Kepson is a digital marketing professional based in Colorado. In addition to SEO, he also enjoys trail running, reading, and occasional blogging."
       />

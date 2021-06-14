@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
-import SEO from '../components/head'
+import Seo from '../components/head'
 
 import Classes from '../styles/classes'
 const {
@@ -25,7 +25,7 @@ export const query = graphql`
 const Blog = ({ data: { markdownRemark } }) => {
   return (
     <Layout>
-      <SEO
+      <Seo
         title={markdownRemark.frontmatter.title}
         canonical={markdownRemark.frontmatter.canonical || null}
       />

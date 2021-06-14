@@ -5,10 +5,6 @@ import { Popover, Transition } from '@headlessui/react'
 import Nav from './nav'
 import MobileNav from './mobilenav'
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 export default function HeaderContent() {
   return (
     <Popover>

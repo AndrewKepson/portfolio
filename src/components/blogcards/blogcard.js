@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 
 import Classes from '../../styles/classes'
 const { blogCard } = Classes.components
@@ -16,11 +16,10 @@ export default function BlogCard({
   return (
     <div className={blogCard.cardContainer}>
       <div className={blogCard.card}>
-        <Img
+        <GatsbyImage
+          image={featuredImage?.childImageSharp?.gatsbyImageData}
           alt={title}
-          className={blogCard.img}
-          fluid={featuredImage?.childImageSharp.fluid}
-        />
+          className={blogCard.img} />
         <div className={blogCard.content}>
           <Link to={slug} className={blogCard.slugStyle}>
             <h5 className={blogCard.anchorText}>{title}</h5>
@@ -30,7 +29,7 @@ export default function BlogCard({
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 BlogCard.propTypes = {
