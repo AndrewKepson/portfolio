@@ -3,11 +3,14 @@ import PropTypes from 'prop-types'
 
 const EmailInput = ({ labelClass, inputClass, value, onChange }) => (
   <div className="mb-6">
-    <label className={labelClass}>Email Address:</label>
+    <label className={labelClass} htmlFor="emailInput">
+      Email Address:
+    </label>
     <input
       className={inputClass}
       type="email"
       name="email"
+      id="emailInput"
       value={value}
       placeholder="example@example.com"
       onChange={onChange}
