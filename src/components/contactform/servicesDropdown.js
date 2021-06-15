@@ -7,9 +7,11 @@ import DropdownArrow from './dropdownArrow'
 
 const ServicesDropdown = ({ labelClass, selectClass, wrapperClass }) => (
   <div className="mb-6">
-    <label className={labelClass}>I Need Help With:</label>
+    <label className={labelClass} htmlFor="servicesDropdown">
+      I Need Help With:
+    </label>
     <div className="relative">
-      <select className={selectClass} name="field-name">
+      <select className={selectClass} name="field-name" id="servicesDropdown">
         <DropdownOption options={ServicesOffered} />
       </select>
       <div className={wrapperClass}>
