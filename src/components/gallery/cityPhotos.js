@@ -18,14 +18,15 @@ const CityPhotos = () => {
           src="../../images/portfolio-photos/SEATTLE1.jpg"
           loading="lazy"
           placeholder="blurred"
-          className="rounded shadow-lg mb-2"
+          className="mb-2"
+          imgClassName="rounded shadow-lg"
           alt="Seattle, Washington"
         />
         <StaticImage
           src="../../images/portfolio-photos/PORTLAND1.jpg"
           loading="lazy"
           placeholder="blurred"
-          className="rounded shadow-lg"
+          imgClassName="rounded shadow-lg"
           alt="Central Park in Portland, Oregon"
         />
       </div>
