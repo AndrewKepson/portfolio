@@ -8,30 +8,34 @@ const ColoradoPhotos = () => {
         <StaticImage
           src="../../../src/images/portfolio-photos/MAROON_BELLS1.jpg"
           loading="lazy"
+          placeholder="blurred"
           className="rounded shadow"
           alt="The Maroon Bells in Aspen, Colorado"
         />
       </div>
       <div className="p-2 mb-4 md:mb-0">
         <StaticImage
-          src="../../../src/images/portfolio-photos/VAIL1.jpg"
+          src="../../images/portfolio-photos/VAIL1.jpg"
           loading="lazy"
+          placeholder="blurred"
           className="rounded shadow"
           alt="Vail, Colorado"
         />
       </div>
       <div className="p-2 mb-4 md:mb-0">
         <StaticImage
-          src="../../../src/images/portfolio-photos/VAIL2.jpg"
+          src="../../images/portfolio-photos/VAIL2.jpg"
           loading="lazy"
+          placeholder="blurred"
           className="rounded shadow"
           alt="Vail, Colorado"
         />
       </div>
       <div className="p-2 md:mb-0">
         <StaticImage
-          src="../../../src/images/portfolio-photos/ASPENS.jpg"
+          src="../../images/portfolio-photos/ASPENS.jpg"
           loading="lazy"
+          placeholder="blurred"
           className="rounded shadow"
           alt="Aspen trees in Colorado"
         />

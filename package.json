@@ -21,6 +21,7 @@
     "gatsby-plugin-google-gtag": "^3.7.1",
     "gatsby-plugin-image": "^1.7.1",
     "gatsby-plugin-instagram-embed": "^3.0.0",
+    "gatsby-plugin-manifest": "^3.7.1",
     "gatsby-plugin-postcss": "^4.7.1",
     "gatsby-plugin-react-helmet": "^4.7.1",
     "gatsby-plugin-sharp": "^3.7.1",

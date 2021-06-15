@@ -20,12 +20,7 @@ module.exports = {
         fonts: [`Work Sans`, `Poppins`],
       },
     },
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        icon: './static/favicon.ico',
-      },
-    },
+    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
@@ -36,7 +31,9 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1200,
-              linkImagesToOriginal: false,
+              withWebp: true,
+              withAvif: true,
+              linkImagesToOriginal: true,
             },
           },
         ],
@@ -47,6 +44,12 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-instagram-embed`,
     `gatsby-plugin-twitter`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: 'src/images/icon.png',
+      },
+    },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
