@@ -1,12 +1,36 @@
 import React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
+import { useStaticQuery, graphql } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const MainImages = () => {
+  const data = useStaticQuery(graphql`
+    {
+      montanaRiver: file(name: { eq: "MONTANA_RIVER" }) {
+        childImageSharp {
+          gatsbyImageData(
+            quality: 70
+            placeholder: BLURRED
+            formats: [AUTO, WEBP]
+          )
+        }
+      }
+      maroonBells2: file(name: { eq: "MARRON_BELLS2" }) {
+        childImageSharp {
+          gatsbyImageData(
+            quality: 70
+            placeholder: BLURRED
+            formats: [AUTO, WEBP]
+          )
+        }
+      }
+    }
+  `)
+
   return (
     <section className="grid grid-cols-2">
       <div className="col-span-2 md:col-span-1 px-2 mb-4 md:mb-0">
-        <StaticImage
-          src="../../images/portfolio-photos/MONTANA_RIVER.jpg"
+        <GatsbyImage
+          image={getImage(data.montanaRiver)}
           loading="lazy"
           placeholder="blurred"
           className="rounded shadow"
@@ -14,8 +38,8 @@ const MainImages = () => {
         />
       </div>
       <div className="col-span-2 md:col-span-1 px-2 mb-4 md:mb-0">
-        <StaticImage
-          src="../../images/portfolio-photos/MARRON_BELLS2.jpg"
+        <GatsbyImage
+          image={getImage(data.maroonBells2)}
           loading="lazy"
           placeholder="blurred"
           className="rounded shadow"
