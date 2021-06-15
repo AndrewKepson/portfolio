@@ -4,27 +4,30 @@ import { StaticImage } from 'gatsby-plugin-image'
 const UtahPhotos = () => {
   return (
     <section className="grid grid-flow-row grid-cols-1 md:grid-cols-2">
-      <div className="flex flex-wrap w-1/2 w-full">
+      <div className="flex flex-wrap w-full">
         <div className="w-full md:w-1/2 px-2 mb-2">
           <StaticImage
-            src="../../../src/images/portfolio-photos/UTAH_PANCAKES.jpg"
+            src="../../images/portfolio-photos/UTAH_PANCAKES.jpg"
             loading="lazy"
+            placeholder="blurred"
             className="rounded shadow-2xl"
             alt="Escalante Staircase in Utah"
           />
         </div>
         <div className="w-full md:w-1/2 px-2 mb-2">
           <StaticImage
-            src="../../../src/images/portfolio-photos/ESCALANTE_SUNSET.jpg"
+            src="../../images/portfolio-photos/ESCALANTE_SUNSET.jpg"
             loading="lazy"
+            placeholder="blurred"
             className="rounded shadow"
             alt="Escalante Staircase in Utah"
           />
         </div>
         <div className="w-full px-2 mb-2">
           <StaticImage
-            src="../../../src/images/portfolio-photos/UTAH_ARCH1.jpg"
+            src="../../images/portfolio-photos/UTAH_ARCH1.jpg"
             loading="lazy"
+            placeholder="blurred"
             className="rounded shadow"
             alt="Grosvernor Arch in Utah"
           />
@@ -32,8 +35,9 @@ const UtahPhotos = () => {
       </div>
       <div className="w-1/2 w-full px-2 mb-2 w-full">
         <StaticImage
-          src="../../../src/images/portfolio-photos/UTAH_ARCH2.jpg"
+          src="../../images/portfolio-photos/UTAH_ARCH2.jpg"
           loading="lazy"
+          placeholder="blurred"
           className="rounded shadow"
           alt="Grosvernor Arch in Utah"
         />
