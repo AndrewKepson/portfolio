@@ -6,7 +6,7 @@ const ColoradoPhotos = () => {
     <section className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
       <div className="p-2 mb-4 md:mb-0">
         <StaticImage
-          src="../../../src/images/portfolio-photos/MAROON_BELLS1.jpg"
+          src="../../images/portfolio-photos/MAROON_BELLS1.jpg"
           loading="lazy"
           placeholder="blurred"
           className="rounded shadow"
