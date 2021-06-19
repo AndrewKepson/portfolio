@@ -6,7 +6,7 @@ featuredImage: ../images/blog-images/four-minute-blockchain/block-clock.jpeg
 canonical: https://medium.com/@andrewkepson/7-people-to-follow-if-youre-interested-in-blockchain-681ea98bc92f
 ---
 
-<div class="lg:px-44 text-gray-900 text-left text-2xl md:text-xl">
+<div class="text-gray-900 text-left text-2xl md:text-xl">
 Blockchain is one of the hottest topics in the world of technology and innovation, and many leading experts believe that this will continue to accelerate as more companies and even <a class="text-purple-600 hover:text-purple-400" href="https://www.forbes.com/sites/michaeldelcastillo/2019/12/28/secretary-general-says-united-nations-must-embrace-blockchain/?sh=2723462a1379" rel="noopener noreferrer nofollow" target="_blank">governments</a> adopt this technology. Employers believe that Blockchain is one of the most valuable skills that students entering college can learn, and the demand for Blockchain development is expected to explode over the next two years.<br><br>
 
 For many people, Blockchain is a mystery, a word they might have heard thrown around toward the end of 2017 when the price of Bitcoin skyrocketed and introduced the average person to the existence of Cryptocurrency. How are these concepts related, and what do they mean for the future of our technology?<br><br>

@@ -6,7 +6,7 @@ featuredImage: ../images/blog-images/nike-blockchain/nike-shoes-cover.jpeg
 canonical: https://medium.com/@andrewkepson/how-why-nike-is-using-blockchain-to-disrupt-the-sneaker-industry-c09ee68f7ee0
 ---
 
-<div class="lg:px-44 text-gray-900 text-left text-2xl md:text-xl">
+<div class="text-gray-900 text-left text-2xl md:text-xl">
 As someone with a passion for both running in my Nike shoes and for blockchain, my proverbial ears certainly perked up when Nike filed for a blockchain patent in 2019. While blockchain has been heralded for its potential to revolutionize industries such as Supply Chain, I was curious about how one of the world’s most recognized brands intended to utilize blockchain as a part of its business-to-consumer strategy.
 <br><br>
 
