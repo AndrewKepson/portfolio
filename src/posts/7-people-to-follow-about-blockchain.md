@@ -6,7 +6,7 @@ featuredImage: ../images/blog-images/7-people-blockchain/nodes-cover.png
 canonical: https://medium.com/@andrewkepson/7-people-to-follow-if-youre-interested-in-blockchain-681ea98bc92f
 ---
 
-<div class="lg:px-44 text-gray-900 text-left text-2xl md:text-xl">
+<div class="text-gray-900 text-left text-2xl md:text-xl">
 As interest in Blockchain and its related technology continues to grow and more professionals enter the industry, which is rapidly becoming more complex and multifaceted, most people wonder where to start. Perhaps you have just a passing interest in the subject and want to spice up your Twitter feed with light information, or maybe you’re a fanatic who wants to confirm that you’re in on the latest Blockchain news.<br><br>
 
 Either way, here are 7 respected industry professionals who are active on social media and will enrich your understanding of Blockchain and cryptocurrency in different ways:<br><br>

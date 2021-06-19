@@ -45,8 +45,7 @@ const Classes = {
     },
     portfolioCard: {
       cardWrapper: 'w-full p-4 lg:w-1/3',
-      card:
-        'flex flex-col justify-between place-content-around bg-gray-100 h-full px-6 py-16 rounded-lg shadow-lg',
+      card: 'flex flex-col justify-between place-content-around bg-gray-100 h-full px-6 py-16 rounded-lg shadow-lg',
       header: 'font-bold mb-2 text-gray-900 text-xl',
       content: 'mb-4 text-lg',
       anchorText: 'text-purple-400 hover:text-purple-600',
@@ -84,12 +83,11 @@ const Classes = {
   },
   templates: {
     blog: {
-      wrapper:
-        'flex flex-col mx-3 md:mx-20 lg:mx-48 xl:mx-60 relative py-6 overflow-hidden',
+      wrapper: 'flex flex-col mx-3 relative content-center py-6',
       h1: 'text-gray-800 mb-5 text-center text-5xl md:text-6xl',
       h3: 'text-4xl text-bold',
-      content: 'my-8  md:mt-12 lg:mt-14',
-      date: 'lg:px-44 self-end text-lg',
+      content: 'md:mt-12 lg:mt-14 xl:w-2/3 xl:place-self-center',
+      date: 'self-end text-lg',
     },
     sample: {
       wrapper:
