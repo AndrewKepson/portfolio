@@ -33,16 +33,16 @@ const ContactForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
-    const form = e.target
+
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        'form-name': form.getAttribute('name'),
+        'form-name': 'contact',
         ...values,
       }),
     })
-      .then(() => navigate(form.getAttribute('action')))
+      .then(() => navigate('/thank-you/'))
       .catch(error => alert(error))
   }
 

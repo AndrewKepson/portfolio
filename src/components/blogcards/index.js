@@ -24,7 +24,7 @@ const BlogCards = () => {
                     gatsbyImageData(
                       quality: 70
                       placeholder: BLURRED
-                      formats: [AUTO, WEBP, AVIF]
+                      formats: [AUTO, WEBP]
                     )
                   }
                 }
