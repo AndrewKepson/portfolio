@@ -81,7 +81,7 @@ const ContactForm = () => {
         labelClass={form.messageLabel}
         inputClass={form.messageInput}
       />
-      <SubmitButton classes={form.submitButton} handler={handleSubmit} />
+      <SubmitButton classes={form.submitButton} />
     </form>
   )
 }
