@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { navigate } from 'gatsby-link'
 
 import EmailInput from './emailInput'
 import NameInput from './nameInput'
@@ -7,6 +8,12 @@ import ServicesDropdown from './servicesDropdown'
 import SubmitButton from './submitButton'
 
 import Classes from '../../styles/classes'
+
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
 
 const ContactForm = () => {
   const {
@@ -26,12 +33,29 @@ const ContactForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
-    alert(
-      `Thanks for your interest, ${values.fullName}! I am not currently accepting any new assignments.`
-    )
+    const form = e.target
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        ...values,
+      }),
+    })
+      .then(() => navigate(form.getAttribute('action')))
+      .catch(error => alert(error))
   }
+
   return (
-    <>
+    <form
+      name="contact"
+      method="post"
+      action="/thank-you/"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      onSubmit={handleSubmit}
+    >
+      <input type="hidden" name="form-name" value="contact" />
       <NameInput
         labelClass={form.nameLabel}
         inputClass={form.nameInput}
@@ -58,7 +82,7 @@ const ContactForm = () => {
         inputClass={form.messageInput}
       />
       <SubmitButton classes={form.submitButton} handler={handleSubmit} />
-    </>
+    </form>
   )
 }
 
