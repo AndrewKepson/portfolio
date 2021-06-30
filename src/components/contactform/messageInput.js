@@ -14,7 +14,6 @@ const MessageInput = ({ labelClass, value, inputClass, onChange }) => (
       rows="5"
       placeholder="How can I help you?"
       onChange={onChange}
-      disabled
     ></textarea>
   </div>
 )

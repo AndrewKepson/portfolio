@@ -14,7 +14,6 @@ const EmailInput = ({ labelClass, inputClass, value, onChange }) => (
       value={value}
       placeholder="example@example.com"
       onChange={onChange}
-      disabled
     />
   </div>
 )
