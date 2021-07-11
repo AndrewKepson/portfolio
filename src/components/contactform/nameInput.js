@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const NameInput = ({ labelClass, inputClass, value, onChange }) => (
+const NameInput = ({ labelClass, inputClass }) => (
   <div className="mb-6">
     <label className={labelClass} htmlFor="fullNameInput">
       Your Name:
@@ -11,9 +11,7 @@ const NameInput = ({ labelClass, inputClass, value, onChange }) => (
       type="text"
       name="fullName"
       id="fullNameInput"
-      value={value}
       placeholder="Name"
-      onChange={onChange}
     />
   </div>
 )

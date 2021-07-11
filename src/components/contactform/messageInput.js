@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const MessageInput = ({ labelClass, value, inputClass, onChange }) => (
+const MessageInput = ({ labelClass, inputClass }) => (
   <div className="mb-6">
     <label className={labelClass} htmlFor="messageInput">
       Your Message:
@@ -10,10 +10,8 @@ const MessageInput = ({ labelClass, value, inputClass, onChange }) => (
       className={inputClass}
       name="message"
       id="messageInput"
-      value={value}
       rows="5"
       placeholder="How can I help you?"
-      onChange={onChange}
     ></textarea>
   </div>
 )

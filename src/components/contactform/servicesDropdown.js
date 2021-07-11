@@ -11,7 +11,11 @@ const ServicesDropdown = ({ labelClass, selectClass, wrapperClass }) => (
       I Need Help With:
     </label>
     <div className="relative">
-      <select className={selectClass} name="field-name" id="servicesDropdown">
+      <select
+        className={selectClass}
+        name="service-needed"
+        id="servicesDropdown"
+      >
         <DropdownOption options={ServicesOffered} />
       </select>
       <div className={wrapperClass}>
