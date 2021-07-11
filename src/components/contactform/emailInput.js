@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const EmailInput = ({ labelClass, inputClass, value, onChange }) => (
+const EmailInput = ({ labelClass, inputClass }) => (
   <div className="mb-6">
     <label className={labelClass} htmlFor="emailInput">
       Email Address:
@@ -11,9 +11,7 @@ const EmailInput = ({ labelClass, inputClass, value, onChange }) => (
       type="email"
       name="email"
       id="emailInput"
-      value={value}
       placeholder="example@example.com"
-      onChange={onChange}
     />
   </div>
 )

@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { navigate } from 'gatsby-link'
+import React from 'react'
 
 import EmailInput from './emailInput'
 import NameInput from './nameInput'
@@ -9,42 +8,10 @@ import SubmitButton from './submitButton'
 
 import Classes from '../../styles/classes'
 
-const encode = data => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&')
-}
-
 const ContactForm = () => {
   const {
     contact: { form },
   } = Classes.pages
-  const [values, setValues] = useState({
-    fullName: '',
-    email: '',
-    service: '',
-    message: '',
-  })
-
-  const handleChange = e => {
-    const { name, value } = e.target
-    setValues({ ...values, [name]: value })
-  }
-
-  const handleSubmit = e => {
-    e.preventDefault()
-
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': 'contact',
-        ...values,
-      }),
-    })
-      .then(() => navigate('/thank-you/'))
-      .catch(error => alert(error))
-  }
 
   return (
     <form
@@ -53,21 +20,11 @@ const ContactForm = () => {
       action="/thank-you/"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
-      onSubmit={handleSubmit}
     >
+      <input type="hidden" name="bot-field" />
       <input type="hidden" name="form-name" value="contact" />
-      <NameInput
-        labelClass={form.nameLabel}
-        inputClass={form.nameInput}
-        value={values.fullName}
-        onChange={handleChange}
-      />
-      <EmailInput
-        labelClass={form.emailLabel}
-        inputClass={form.emailInput}
-        value={values.email}
-        onChange={handleChange}
-      />
+      <NameInput labelClass={form.nameLabel} inputClass={form.nameInput} />
+      <EmailInput labelClass={form.emailLabel} inputClass={form.emailInput} />
 
       <ServicesDropdown
         labelClass={form.dropdownLabel}
@@ -76,8 +33,6 @@ const ContactForm = () => {
       />
 
       <MessageInput
-        onChange={handleChange}
-        value={values.message}
         labelClass={form.messageLabel}
         inputClass={form.messageInput}
       />
