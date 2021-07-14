@@ -6,6 +6,28 @@ module.exports = {
     author: 'Andrew Kepson',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-198099983-1',
+        head: true,
+        anonymize: true,
+        respectDNT: true,
+        PageTransitionDelay: 0,
+        defer: false,
+        enableWebVitalsTracking: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ['G-MCF0080YYY'],
+        pluginConfig: {
+          head: true,
+          respectDNT: true,
+        },
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -47,16 +69,6 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         icon: 'src/images/icon.png',
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: ['G-MCF0080YYY'],
-        pluginConfig: {
-          head: true,
-          respectDNT: true,
-        },
       },
     },
   ],
