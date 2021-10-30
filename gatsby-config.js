@@ -13,7 +13,7 @@ module.exports = {
         head: true,
         anonymize: true,
         respectDNT: true,
-        PageTransitionDelay: 0,
+        pageTransitionDelay: 0,
         defer: false,
         enableWebVitalsTracking: true,
       },

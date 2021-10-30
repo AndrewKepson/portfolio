@@ -83,11 +83,12 @@ const Classes = {
   },
   templates: {
     blog: {
-      wrapper: 'flex flex-col mx-3 relative content-center py-6',
+      wrapper: 'h-full p-5 md:px-24 lg:px-56',
+      heading: 'flex flex-col justify-center items-center lg:px-24',
       h1: 'text-gray-800 mb-5 text-center text-5xl md:text-6xl',
       h3: 'text-4xl text-bold',
-      content: 'md:mt-12 lg:mt-14 xl:w-2/3 xl:place-self-center',
-      date: 'self-end text-lg',
+      content: 'leading-6 mt-8 text-xl lg:px-24',
+      date: 'mt-6 text-lg text-right',
     },
     sample: {
       wrapper:
