@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Fade from 'react-reveal/Fade'
 
 import Layout from '../components/layout'
 import Seo from '../components/head'
@@ -31,7 +32,9 @@ const Blog = ({ data: { markdownRemark } }) => {
       />
       <article className={wrapper}>
         <section className={heading}>
-          <h1 className={h1}>{markdownRemark.frontmatter.title}</h1>
+          <Fade bottom>
+            <h1 className={h1}>{markdownRemark.frontmatter.title}</h1>
+          </Fade>
           {markdownRemark.frontmatter.tagline && (
             <p className="text-lg">{markdownRemark.frontmatter.tagline}</p>
           )}

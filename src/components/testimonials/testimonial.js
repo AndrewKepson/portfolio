@@ -1,4 +1,5 @@
 import React from 'react'
+import Fade from 'react-reveal/Fade'
 
 import QuotationSymbol from './quotationSymbol'
 
@@ -7,7 +8,9 @@ export default function Testimonial({ quote, source }) {
     <div className="py-2 md:py-4">
       <div className="mx-auto p-4 w-full lg:w-8/12">
         <div className="relative">
-          <QuotationSymbol />
+          <Fade top>
+            <QuotationSymbol />
+          </Fade>
           <h4 className="font-medium leading-tight mb-4 text-4xl text-gray-800">
             {quote}
           </h4>
