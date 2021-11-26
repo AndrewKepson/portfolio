@@ -1,5 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import Fade from 'react-reveal/Fade'
 
 import { CodePortfolio } from '../../data/codeProjectsPortfolio'
 import DevelopmentCard from './developmentCard'
@@ -9,24 +10,28 @@ import Classes from '../../styles/classes'
 const { developmentCard } = Classes.components
 
 const DevelopmentCards = () => {
-  const data = useStaticQuery(graphql`query projectPhotos {
-  allFile(
-    filter: {sourceInstanceName: {eq: "src"}, relativePath: {regex: "/images/development-project-images/"}}
-  ) {
-    edges {
-      node {
-        id
-        absolutePath
-        relativePath
-        name
-        childImageSharp {
-          gatsbyImageData(quality: 70, layout: FULL_WIDTH)
+  const data = useStaticQuery(graphql`
+    query projectPhotos {
+      allFile(
+        filter: {
+          sourceInstanceName: { eq: "src" }
+          relativePath: { regex: "/images/development-project-images/" }
+        }
+      ) {
+        edges {
+          node {
+            id
+            absolutePath
+            relativePath
+            name
+            childImageSharp {
+              gatsbyImageData(quality: 70, layout: FULL_WIDTH)
+            }
+          }
         }
       }
     }
-  }
-}
-`)
+  `)
 
   return (
     <div className="flex flex-col">
@@ -35,12 +40,14 @@ const DevelopmentCards = () => {
           edge => edge.node.name === project.photo
         )
         return (
-          <DevelopmentCard
-            key={i}
-            classes={developmentCard}
-            imgSrc={source}
-            project={project}
-          />
+          <Fade bottom>
+            <DevelopmentCard
+              key={i}
+              classes={developmentCard}
+              imgSrc={source}
+              project={project}
+            />
+          </Fade>
         )
       })}
     </div>

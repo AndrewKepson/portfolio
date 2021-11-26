@@ -1,4 +1,5 @@
 import React from 'react'
+import Fade from 'react-reveal/Fade'
 
 import Layout from '../components/layout'
 import Seo from '../components/head'
@@ -16,7 +17,9 @@ const ContactPage = () => {
       <div>
         <h1>Contact Me</h1>
         <ContactForm />
-        <Testimonials />
+        <Fade bottom>
+          <Testimonials />
+        </Fade>
       </div>
     </Layout>
   )
