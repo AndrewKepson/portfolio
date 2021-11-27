@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { Popover } from '@headlessui/react'
 import { XIcon } from '@heroicons/react/outline'
 
-import Brand from './brand'
+import Brand from './Brand'
 
 const navigation = [
   { name: 'Home', to: '/' },

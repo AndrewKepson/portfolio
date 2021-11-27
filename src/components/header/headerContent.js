@@ -2,8 +2,8 @@
 import React, { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 
-import Nav from './nav'
-import MobileNav from './mobilenav'
+import Nav from './Nav'
+import MobileNav from './Mobilenav'
 
 export default function HeaderContent() {
   return (

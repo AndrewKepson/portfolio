@@ -1,9 +1,10 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: 'Andrew Kepson',
+    title: `Andrew Kepson`,
     description: `Andrew Kepson's personal website for portfolio pieces and blog posts.`,
-    author: 'Andrew Kepson',
+    author: `Andrew Kepson`,
+    siteUrl: `https://andrewkepson.com/`,
   },
   plugins: [
     {

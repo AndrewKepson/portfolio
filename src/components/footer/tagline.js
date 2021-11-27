@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import Copyright from './copyright'
+import Copyright from './Copyright'
 
 export default function Tagline() {
   const data = useStaticQuery(graphql`

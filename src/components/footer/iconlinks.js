@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Twitter from './twitter'
-import LinkedIn from './linkedin'
-import Github from './github'
+import Twitter from './Twitter'
+import LinkedIn from './Linkedin'
+import Github from './Github'
 
 export default function IconLinks() {
   return (

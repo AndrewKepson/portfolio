@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ActiveLayout from './activeLayout'
+import ActiveLayout from './ActiveLayout'
 
 const Layout = ({ children }) => <ActiveLayout children={children} />
 

@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Tagline from './tagline'
-import IconLinks from './iconlinks'
+import Tagline from './Tagline'
+import IconLinks from './Iconlinks'
 
 export default function FooterContent() {
   return (

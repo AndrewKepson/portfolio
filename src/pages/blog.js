@@ -2,7 +2,7 @@ import React from 'react'
 
 import Layout from '../components/layout'
 import Seo from '../components/head'
-import BlogCards from '../components/blogcards'
+import BlogPageContent from '../components/BlogPage'
 
 const BlogPage = () => (
   <Layout>
@@ -10,7 +10,7 @@ const BlogPage = () => (
       title="Blog"
       description="Read the thoughts Andrew has over the months and years."
     />
-    <BlogCards />
+    <BlogPageContent />
   </Layout>
 )
 
