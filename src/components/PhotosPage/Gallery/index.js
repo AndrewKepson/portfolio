@@ -3,6 +3,7 @@ import React from 'react'
 import MainImages from './MainImages'
 import ColoradoPhotos from './ColoradoPhotos'
 import UtahPhotos from './UtahPhotos'
+import NorthCarolinaPhotos from './NorthCarolinaPhotos'
 import CityPhotos from './CityPhotos'
 
 const Gallery = () => (
@@ -10,6 +11,7 @@ const Gallery = () => (
     <MainImages />
     <ColoradoPhotos />
     <UtahPhotos />
+    <NorthCarolinaPhotos />
     <CityPhotos />
   </div>
 )

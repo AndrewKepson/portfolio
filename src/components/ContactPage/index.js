@@ -6,8 +6,14 @@ import Testimonials from './Testimonials'
 
 const ContactPageContent = () => (
   <div>
-    <h1>Contact Me</h1>
-    <ContactForm />
+    <Fade left>
+      <h1 className="text-3xl md:text-6xl text-gray-800 font-roboto mb-4">
+        Contact Me
+      </h1>
+    </Fade>
+    <Fade right>
+      <ContactForm />
+    </Fade>
     <Fade bottom>
       <Testimonials />
     </Fade>

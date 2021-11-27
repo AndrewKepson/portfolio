@@ -40,7 +40,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Work Sans`, `Poppins`],
+        fonts: [`Work Sans`, `Poppins`,`Roboto`],
       },
     },
     `gatsby-plugin-sharp`,

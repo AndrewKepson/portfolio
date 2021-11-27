@@ -23,27 +23,29 @@ export const query = graphql`
   }
 `
 
-const Blog = ({ data: { markdownRemark } }) => {
+const Blog = ({
+  data: {
+    markdownRemark: {
+      frontmatter: { title, date: publishedDate, canonical, tagline },
+      html,
+    },
+  },
+}) => {
   return (
     <Layout>
-      <Seo
-        title={markdownRemark.frontmatter.title}
-        canonical={markdownRemark.frontmatter.canonical || null}
-      />
+      <Seo title={title} canonical={canonical || null} />
       <article className={wrapper}>
         <section className={heading}>
           <Fade bottom>
-            <h1 className={h1}>{markdownRemark.frontmatter.title}</h1>
+            <h1 className={h1}>{title}</h1>
           </Fade>
-          {markdownRemark.frontmatter.tagline && (
-            <p className="text-lg">{markdownRemark.frontmatter.tagline}</p>
-          )}
+          {tagline && <p className="text-lg">{tagline}</p>}
         </section>
         <section
           className={content}
-          dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
+          dangerouslySetInnerHTML={{ __html: html }}
         />
-        <p className={date}>Published {markdownRemark.frontmatter.date}</p>
+        <p className={date}>Published {publishedDate}</p>
       </article>
     </Layout>
   )

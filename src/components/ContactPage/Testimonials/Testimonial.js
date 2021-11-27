@@ -15,7 +15,9 @@ export default function Testimonial({ quote, source }) {
             {quote}
           </h4>
           <div>
-            <p className="inline-block">{source}</p>
+            <p className="inline-block font-roboto text-lg text-gray-700">
+              {source}
+            </p>
           </div>
         </div>
       </div>

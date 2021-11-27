@@ -1,6 +1,5 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Fade from 'react-reveal/Fade'
 
 import { CodePortfolio } from '../../../data/codeProjectsPortfolio'
 import DevelopmentCard from './DevelopmentCard'
@@ -40,14 +39,12 @@ const DevelopmentCards = () => {
           edge => edge.node.name === project.photo
         )
         return (
-          <Fade bottom>
-            <DevelopmentCard
-              key={i}
-              classes={developmentCard}
-              imgSrc={source}
-              project={project}
-            />
-          </Fade>
+          <DevelopmentCard
+            key={i}
+            classes={developmentCard}
+            imgSrc={source}
+            project={project}
+          />
         )
       })}
     </div>
