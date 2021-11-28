@@ -31,8 +31,9 @@ const AboutPageContent = () => {
         </Fade>
         <Fade bottom>
           <p className={about.leadingRelaxed}>
-            Digital marketing. SEO. Content. JavaScript. Interested in site
-            speed, blockchain, and privacy-first marketing.
+            Digital marketing. SEO. Content. JavaScript. Focused on site speed,
+            privacy-first marketing, blockchain, and bridging the gap between
+            web development and marketing.
           </p>
         </Fade>
       </div>
