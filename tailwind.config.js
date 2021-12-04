@@ -5,11 +5,12 @@ module.exports = {
     fontFamily: {
       'work-sans': 'Work\\ Sans',
       poppins: 'Poppins',
+      roboto: 'Roboto',
     },
     extend: {},
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 }

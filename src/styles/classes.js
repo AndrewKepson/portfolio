@@ -6,8 +6,8 @@ const Classes = {
       textContainer:
         'w-full lg:w-1/2 px-2 md:px-12 lg:px-20 mb-4 md:mb-0 text-xl lg:text-lg',
       heading:
-        'text-5xl text-gray-600 mb-6 leading-tight font-semibold font-heading',
-      leadingRelaxed: 'mb-4 leading-relaxed',
+        'text-3xl md:text-6xl text-gray-800 mb-6 leading-tight font-roboto font-semibold',
+      leadingRelaxed: 'font-work-sans mb-4 leading-relaxed text-gray-600',
       imgContainer: 'w-full lg:w-1/2 px-4 mb-4 md:mb-0',
     },
     contact: {
@@ -34,14 +34,14 @@ const Classes = {
   components: {
     blogCard: {
       cardContainer:
-        'flex items-stretch content-between w-full md:w-6/12 lg:w-4/12 p-6',
-      card: 'flex flex-col bg-gray-100 shadow-lg',
-      img: 'h-1/2 w-full',
+        'flex items-stretch content-between w-full md:w-1/2 lg:w-1/3 p-6',
+      card: 'flex flex-col bg-gray-100 shadow-lg rounded-lg border-0 pb-6',
+      img: 'h-1/2 w-full rounded-t-lg',
       content: 'p-3 md:px-6 pt-3 md:pt-6',
-      slugStyle: 'block hover:text-purple-400 mb-2 text-gray-800',
+      slugStyle: 'block hover:text-purple-400 mb-2 font-roboto text-gray-800',
       anchorText: 'font-bold leading-tight text-lg md:text-xl',
       date: 'font-semibold leading-tight mb-2 text-gray-600 text-xs',
-      excerpt: 'text-xs md:text-lg',
+      excerpt: 'font-work-sans text-xs md:text-lg',
     },
     portfolioCard: {
       cardWrapper: 'w-full p-4 lg:w-1/3',
@@ -85,9 +85,9 @@ const Classes = {
     blog: {
       wrapper: 'h-full p-5 md:px-24 lg:px-56',
       heading: 'flex flex-col justify-center items-center lg:px-24',
-      h1: 'text-gray-800 mb-5 text-center text-5xl md:text-6xl',
+      h1: 'font-roboto text-gray-800 text-center text-5xl md:text-6xl mb-5',
       h3: 'text-4xl text-bold',
-      content: 'leading-6 mt-8 text-xl lg:px-24',
+      content: 'font-work-sans leading-6 mt-8 text-xl lg:px-24',
       date: 'mt-6 text-lg text-right',
     },
     sample: {
