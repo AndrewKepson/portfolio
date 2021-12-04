@@ -1,6 +1,5 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Fade from 'react-reveal/Fade'
 
 import BlogCard from './Blogcard'
 
