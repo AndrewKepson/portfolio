@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Fade from 'react-reveal/Fade'
+import { useSiteMetadata } from '../hooks/useSiteMetadata'
 
 import Layout from '../components/layout'
 import Seo from '../components/head'
@@ -16,9 +17,11 @@ export const query = graphql`
       frontmatter {
         title
         date
-        canonical
       }
       html
+      fields {
+        slug
+      }
     }
   }
 `
@@ -26,14 +29,21 @@ export const query = graphql`
 const Blog = ({
   data: {
     markdownRemark: {
-      frontmatter: { title, date: publishedDate, canonical, tagline },
+      frontmatter: { title, date: publishedDate, tagline },
       html,
+      fields: { slug },
     },
   },
 }) => {
+  const {
+    site: {
+      siteMetadata: { siteUrl },
+    },
+  } = useSiteMetadata()
+
   return (
     <Layout>
-      <Seo title={title} canonical={canonical || null} />
+      <Seo title={title} canonical={`${siteUrl}/blog/${slug}`} />
       <article className={wrapper}>
         <section className={heading}>
           <Fade bottom>
