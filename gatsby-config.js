@@ -29,6 +29,13 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: `https://andrewkepson.com`,
+        policy: [{ userAgent: '*', allow: '/', disallow: '/writing' }],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
