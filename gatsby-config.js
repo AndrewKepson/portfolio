@@ -29,6 +29,28 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: '/sitemap',
+        excludes: [
+          `/writing/`,
+          `/writing/a-title-compelling-enough`,
+          `/writing/how-nike-is-using-blockchain-nike-cryptokicks`,
+          `/writing/sample1`,
+          `/writing/van-in-snowmass`,
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: `https://andrewkepson.com`,
+        policy: [
+          { userAgent: '*', allow: '/', disallow: ['/writing', '/static'] },
+        ],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
