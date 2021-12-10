@@ -30,10 +30,19 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: '/sitemap',
+        excludes: [`/writing/`],
+      },
+    },
+    {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
         host: `https://andrewkepson.com`,
-        policy: [{ userAgent: '*', allow: '/', disallow: '/writing' }],
+        policy: [
+          { userAgent: '*', allow: '/', disallow: ['/writing', '/static'] },
+        ],
       },
     },
     `gatsby-plugin-react-helmet`,
