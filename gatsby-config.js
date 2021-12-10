@@ -33,7 +33,13 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         output: '/sitemap',
-        excludes: [`/writing/`],
+        excludes: [
+          `/writing/`,
+          `/writing/a-title-compelling-enough`,
+          `/writing/how-nike-is-using-blockchain-nike-cryptokicks`,
+          `/writing/sample1`,
+          `/writing/van-in-snowmass`,
+        ],
       },
     },
     {
