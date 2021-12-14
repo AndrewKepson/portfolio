@@ -34,11 +34,6 @@ const HTMLSitemap = () => (
           </Link>
         </li>
         <li>
-          <Link className="hover:text-purple-400" to="/writing">
-            Content Writing Portfolio
-          </Link>
-        </li>
-        <li>
           <Link className="hover:text-purple-400" to="/photos">
             Photography
           </Link>
@@ -74,6 +69,15 @@ const HTMLSitemap = () => (
             to="/blog/how-and-why-nike-is-using-blockchain"
           >
             How and Why Nike is Using Blockchain to Disrupt the Sneaker Industry
+          </Link>
+        </li>
+        <li>
+          <Link
+            className="hover:text-purple-400"
+            to="/blog/create-headless-wordpress-source-gatsby-wordpress-api"
+          >
+            Creating Our Own Headless WordPress Source with Gatsby & the
+            WordPress API
           </Link>
         </li>
       </ul>

@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Fade from 'react-reveal/Fade'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
 
 import Layout from '../components/layout'
@@ -46,9 +45,7 @@ const Blog = ({
       <Seo title={title} canonical={`${siteUrl}/blog/${slug}`} />
       <article className={wrapper}>
         <section className={heading}>
-          <Fade bottom>
-            <h1 className={h1}>{title}</h1>
-          </Fade>
+          <h1 className={h1}>{title}</h1>
           {tagline && <p className="text-lg">{tagline}</p>}
         </section>
         <section
