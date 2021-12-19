@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const UtahPhotos = () => {
   const data = useStaticQuery(graphql`
@@ -45,39 +45,41 @@ const UtahPhotos = () => {
   `)
 
   return (
-    <section className="grid grid-flow-row grid-cols-1 md:grid-cols-2">
-      <div className="flex flex-wrap w-full">
-        <div className="w-full md:w-1/2 px-2 mb-2">
-          <GatsbyImage
-            image={getImage(data.pancakes)}
-            loading="lazy"
-            placeholder="blurred"
-            className="rounded shadow-2xl"
-            alt="Escalante Staircase in Utah"
-          />
-        </div>
-        <div className="w-full md:w-1/2 px-2 mb-2">
-          <GatsbyImage
-            image={getImage(data.escalante)}
-            loading="lazy"
-            placeholder="blurred"
-            className="rounded shadow"
-            alt="Escalante Staircase in Utah"
-          />
-        </div>
-        <div className="w-full px-2 mb-2">
-          <GatsbyImage
-            image={getImage(data.grosvernor1)}
-            loading="lazy"
-            placeholder="blurred"
-            className="rounded shadow"
-            alt="Grosvernor Arch in Utah"
-          />
-        </div>
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="col-span-1">
+        <StaticImage
+          src="../../../images/portfolio-photos/utah/UTAH_PANCAKES.jpg"
+          quality={90}
+          loading="lazy"
+          placeholder="blurred"
+          className="rounded shadow-2xl"
+          alt="Escalante Staircase in Utah"
+        />
       </div>
-      <div className="w-1/2 w-full px-2 mb-2 w-full">
-        <GatsbyImage
-          image={getImage(data.grosvernor2)}
+      <div className="col-span-1">
+        <StaticImage
+          src="../../../images/portfolio-photos/utah/ESCALANTE_SUNSET.jpg"
+          quality={90}
+          loading="lazy"
+          placeholder="blurred"
+          className="rounded shadow"
+          alt="Escalante Staircase in Utah"
+        />
+      </div>
+      <div className="col-span-1 md:col-span-2">
+        <StaticImage
+          src="../../../images/portfolio-photos/utah/UTAH_ARCH1.jpg"
+          quality={90}
+          loading="lazy"
+          placeholder="blurred"
+          className="rounded shadow"
+          alt="Grosvernor Arch in Utah"
+        />
+      </div>
+      <div className="col-span-1 md:row-span-2 md:hidden">
+        <StaticImage
+          src="../../../images/portfolio-photos/utah/UTAH_ARCH2.jpg"
+          quality={90}
           loading="lazy"
           placeholder="blurred"
           className="rounded shadow"

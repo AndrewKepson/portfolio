@@ -118,6 +118,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-instagram-embed`,
     `gatsby-plugin-twitter`,
+    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -129,6 +130,7 @@ module.exports = {
       options: {
         colors: ['#B0D0EA', '#6E94CA', '#336591'],
         intensity: 'blizzard',
+        duration: 7,
         season: {
           start: new Date('December 1, 2021 00:00:10'),
           end: new Date('December 31, 2021 23:59:50'),

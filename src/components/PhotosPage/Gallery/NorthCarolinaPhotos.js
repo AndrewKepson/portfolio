@@ -17,7 +17,7 @@ export default function NorthCarolinaPhotos() {
       fallColors: file(name: { eq: "nc-fall-colors" }) {
         childImageSharp {
           gatsbyImageData(
-            quality: 60
+            quality: 90
             placeholder: BLURRED
             formats: [AUTO, WEBP]
           )
@@ -26,7 +26,7 @@ export default function NorthCarolinaPhotos() {
       gatlinburg: file(name: { eq: "gatlinburg-river" }) {
         childImageSharp {
           gatsbyImageData(
-            quality: 60
+            quality: 90
             placeholder: BLURRED
             formats: [AUTO, WEBP]
           )
@@ -36,7 +36,7 @@ export default function NorthCarolinaPhotos() {
   `)
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-4 px-2">
+    <section className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-4">
       <div className="md:col-span-3 md:row-span-2">
         <GatsbyImage
           image={getImage(data.blueRidge)}
