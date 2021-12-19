@@ -4,7 +4,7 @@ module.exports = {
     title: `Andrew Kepson`,
     description: `Andrew Kepson's personal website for portfolio pieces and blog posts.`,
     author: `Andrew Kepson`,
-    siteUrl: `https://andrewkepson.com/`,
+    siteUrl: `https://andrewkepson.com`,
   },
   plugins: [
     {
@@ -57,6 +57,35 @@ module.exports = {
       options: {
         name: 'src',
         path: `${__dirname}/src/`,
+      },
+    },
+    `gatsby-plugin-catch-links`,
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        url: `https://headless.andrewkepson.com/graphql`,
+        develop: {
+          hardCacheMediaFiles: true,
+        },
+        production: {
+          allow404Images: true,
+          allow401Images: true,
+        },
+        schema: {
+          typePrefix: `Wp`,
+        },
+        html: {
+          useGatsbyImage: true,
+          generateWebpImages: true,
+          imageMaxWidth: 800,
+          imageQuality: 90,
+          createStaticFiles: true,
+        },
+        type: {
+          Post: {
+            limit: process.env.NODE_ENV === `development` ? 50 : 5000,
+          },
+        },
       },
     },
     {

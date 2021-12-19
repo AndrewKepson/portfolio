@@ -1,49 +1,34 @@
 const path = require('path')
+const { slash } = require('gatsby-core-utils')
 
-module.exports.onCreateNode = ({ node, actions }) => {
-  const { createNodeField } = actions
-
-  if (node.internal.type === 'MarkdownRemark') {
-    const slug = path.basename(node.fileAbsolutePath, '.md')
-
-    createNodeField({
-      node,
-      name: 'slug',
-      value: slug,
-    })
-  }
-}
-
-module.exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
-
+module.exports.createPages = async ({ graphql, actions: { createPage } }) => {
   const getBlogs = await graphql(`
-    query {
-      allFile(filter: { dir: { regex: "/posts/" } }) {
+    {
+      allWpPost {
         edges {
           node {
-            childMarkdownRemark {
-              frontmatter {
-                date
-                title
-              }
-              fields {
-                slug
-              }
-            }
+            id
+            uri
+            title
+            slug
           }
         }
       }
     }
   `)
 
-  getBlogs.data.allFile.edges.forEach(edge => {
+  if (getBlogs.errors) throw new Error(getBlogs.errors)
+
+  const wordPressPosts = getBlogs.data.allWpPost.edges
+  const blogTemplate = path.resolve(`./src/templates/post.js`)
+
+  wordPressPosts.forEach(post =>
     createPage({
-      component: path.resolve(`./src/templates/blog.js`),
-      path: `/blog/${edge.node.childMarkdownRemark.fields.slug}`,
+      path: post.node.uri,
+      component: slash(blogTemplate),
       context: {
-        slug: edge.node.childMarkdownRemark.fields.slug,
+        id: post.node.id,
       },
     })
-  })
+  )
 }
