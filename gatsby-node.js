@@ -1,7 +1,22 @@
 const path = require('path')
 const { slash } = require('gatsby-core-utils')
 
-module.exports.createPages = async ({ graphql, actions: { createPage } }) => {
+module.exports.createPages = async ({
+  graphql,
+  actions: { createPage, createRedirect },
+}) => {
+  createRedirect({
+    fromPath: '/blog/create-headless-wordpress-source-gatsby-wordpress-api/',
+    toPath:
+      '/blog/headless-wordpress/create-headless-wordpress-source-gatsby-wordpress-api/',
+    isPermanent: true,
+  })
+  createRedirect({
+    fromPath: '/blog/how-and-why-nike-is-using-blockchain/',
+    toPath: '/blog/blockchain/how-and-why-nike-is-using-blockchain/',
+    isPermanent: true,
+  })
+
   const getBlogs = await graphql(`
     {
       allWpPost {
