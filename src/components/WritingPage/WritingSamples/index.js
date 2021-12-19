@@ -7,33 +7,33 @@ import Classes from '../../../styles/classes'
 const { writingSamples } = Classes.components
 
 const WritingSamples = () => {
-  const data = useStaticQuery(graphql`
-    query GetSampleData {
-      allFile(filter: { relativeDirectory: { eq: "samples" } }) {
-        edges {
-          node {
-            childMarkdownRemark {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-              }
-              id
-              excerpt
-            }
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query GetSampleData {
+  //     allFile(filter: { relativeDirectory: { eq: "samples" } }) {
+  //       edges {
+  //         node {
+  //           childMarkdownRemark {
+  //             fields {
+  //               slug
+  //             }
+  //             frontmatter {
+  //               title
+  //             }
+  //             id
+  //             excerpt
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
-  const { edges } = data.allFile
+  // const { edges } = data.allFile
 
   return (
     <div className={writingSamples.container}>
       <div className={writingSamples.content}>
-        {edges.map(sample => {
+        {/* {edges.map(sample => {
           const {
             node: {
               childMarkdownRemark: {
@@ -53,7 +53,7 @@ const WritingSamples = () => {
               excerpt={excerpt}
             />
           )
-        })}
+        })} */}
       </div>
     </div>
   )

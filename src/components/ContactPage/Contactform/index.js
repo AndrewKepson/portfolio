@@ -1,5 +1,4 @@
 import React from 'react'
-import Fade from 'react-reveal/Fade'
 
 import EmailInput from './EmailInput'
 import NameInput from './NameInput'

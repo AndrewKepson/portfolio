@@ -1,4 +1,5 @@
 const Classes = {
+  // Pages
   pages: {
     about: {
       wrapper:
@@ -31,6 +32,7 @@ const Classes = {
       },
     },
   },
+  // Components
   components: {
     blogCard: {
       cardContainer:
@@ -81,6 +83,7 @@ const Classes = {
       content: 'grid gap-16 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12',
     },
   },
+  // Templates
   templates: {
     blog: {
       wrapper: 'h-full max-w-full p-5 md:px-24 lg:px-56',
