@@ -16,6 +16,7 @@ const Post = ({
       title,
       date,
       content,
+      excerpt,
       categories,
       tags: postTags,
       featuredImage,
@@ -30,6 +31,17 @@ const Post = ({
       siteMetadata: { siteUrl },
     },
   } = useSiteMetadata()
+
+  const schema = {
+    title,
+    category,
+    content,
+    excerpt,
+    date,
+    url: `${siteUrl}${uri}`,
+    keywords: seo.metaKeywords,
+    topic: category,
+  }
 
   return (
     <Layout>
@@ -57,6 +69,9 @@ export const query = graphql`
         title
         metaDesc
         metaKeywords
+        schema {
+          raw
+        }
       }
       uri
       title
