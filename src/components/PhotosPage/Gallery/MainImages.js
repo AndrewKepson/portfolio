@@ -5,7 +5,7 @@ const MainImages = () => (
   <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
     <div className="col-span-1">
       <StaticImage
-        src="../../../images/portfolio-photos/montana/MONTANA_RIVER.jpg"
+        src="../../../images/portfolio-photos/montana/MONTANA_RIVER.JPG"
         quality={90}
         loading="lazy"
         placeholder="blurred"
@@ -15,7 +15,7 @@ const MainImages = () => (
     </div>
     <div className="col-span-1">
       <StaticImage
-        src="../../../images/portfolio-photos/colorado/MARRON_BELLS2.jpg"
+        src="../../../images/portfolio-photos/colorado/MARRON_BELLS2.JPG"
         quality={90}
         loading="lazy"
         placeholder="blurred"

@@ -5,7 +5,7 @@ const CityPhotos = () => (
   <section className="grid grid-flow-row grid-cols-1 md:grid-cols-2 gap-4">
     <div>
       <StaticImage
-        src="../../../images/portfolio-photos/cities/STUYVESANT_ST.jpg"
+        src="../../../images/portfolio-photos/cities/STUYVESANT_ST.JPG"
         quality={90}
         loading="lazy"
         placeholder="blurred"
