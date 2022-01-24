@@ -21,7 +21,7 @@ const NothingHere = () => {
   `)
 
   return (
-    <article className="bg-white h-full rounded shadow-xl flex">
+    <article className="bg-white h-full rounded shadow-xl flex mb-6">
       <div className="h-full flex flex-col flex-wrap">
         <div className="w-full">
           <GatsbyImage
@@ -37,10 +37,13 @@ const NothingHere = () => {
           <div>
             <p className="font-body font-light text-2xl text-gray-700">
               Don't see what you're looking for?{' '}
-              <Link to="/contact" className="text-primary hover:text-red-600">
-                Contact us
+              <Link
+                to="/contact"
+                className="text-purple-600 hover:text-purple-400"
+              >
+                Contact me
               </Link>{' '}
-              with your question. Maybe we'll answer with a blog post about it!
+              with your question. Maybe I'll answer with a blog post about it!
             </p>
           </div>
         </div>

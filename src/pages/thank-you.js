@@ -22,7 +22,7 @@ const ThankYouPage = () => (
         </p>
       </section>
       <StaticImage
-        src="../images/portfolio-photos/MONTANA_RIVER.jpg"
+        src="../images/portfolio-photos/MONTANA_RIVER.JPG"
         alt="Vail, Colorado"
         placeholder="tracedSVG"
         layout="constrained"
