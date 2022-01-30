@@ -10,6 +10,15 @@ export const CodePortfolio = [
     altText: 'Arcane Realty Investors landing page',
   },
   {
+    project: 'Headless WordPress Blog with Node & GraphQL',
+    github:
+      'https://github.com/AndrewKepson/headless-wordpress-node-graphql-ejs',
+    deployment: 'https://lorem-ipsum-blog.herokuapp.com/blog',
+    description: `A headless WordPress blog built using Express, GraphQL, & EJS.`,
+    photo: 'lorem-ipsum-blog-headless-wordpress-node',
+    altText: 'Headless WordPress blog Node GraphQL',
+  },
+  {
     project: 'Responsive Ecommerce Product Page',
     github:
       'https://github.com/AndrewKepson/Tailwind-Landing-Pages/blob/master/src/pages/shoe-ecommerce-page.js',
