@@ -80,6 +80,14 @@ const HTMLSitemap = () => (
             WordPress API
           </Link>
         </li>
+        <li>
+          <Link
+            className="hover:text-purple-400"
+            to="/blog/headless-wordpress/building-headless-wordpress-node-graphql/"
+          >
+            Building a Headless WordPress Site with Node & GraphQL
+          </Link>
+        </li>
       </ul>
     </div>
   </Layout>

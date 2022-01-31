@@ -68,7 +68,7 @@ export const PersonData = {
   ],
 }
 
-export default function PersonSchema() {
+export function PersonSchema() {
   return (
     <script type="application/ld+json">{JSON.stringify(PersonData)}</script>
   )

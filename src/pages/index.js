@@ -3,9 +3,10 @@ import React from 'react'
 import Layout from '../components/layout'
 import Seo from '../components/head'
 import HomePageContent from '../components/HomePage'
-import PersonSchema from '../components/Schema/Person'
+import { PersonSchema } from '../components/Schema/Person'
 
 const IndexPage = () => {
+  console.log(PersonSchema)
   return (
     <Layout>
       <Seo
