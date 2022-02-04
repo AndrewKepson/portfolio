@@ -1,4 +1,5 @@
 import React from 'react'
+import { WebPageSchema } from '../components/Schema/WebPage'
 
 import Layout from '../components/layout'
 import Seo from '../components/head'
@@ -18,6 +19,7 @@ const AboutPage = () => (
         Not much else to say at this point.
       </p>
     </div>
+    <WebPageSchema name="About Andrew Kepson" description="" uri="about" type="AboutPage" />
   </Layout>
 )
 
