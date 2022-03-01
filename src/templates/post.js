@@ -6,7 +6,6 @@ import Layout from '../components/layout'
 import Seo from '../components/head'
 
 import Classes from '../styles/classes'
-const { wrapper, heading, h1, content, date } = Classes.templates.blog
 
 const Post = ({
   data: {
@@ -16,7 +15,6 @@ const Post = ({
       title,
       date,
       content,
-      excerpt,
       categories,
       tags: postTags,
       featuredImage,
@@ -66,7 +64,6 @@ export const query = graphql`
       uri
       title
       date(formatString: "MMMM Do, YYYY")
-      excerpt
       tags {
         nodes {
           name
