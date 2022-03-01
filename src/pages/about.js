@@ -1,9 +1,10 @@
 import React from 'react'
+import {graphql} from 'gatsby'
 
 import Layout from '../components/layout'
 import Seo from '../components/head'
 
-const AboutPage = () => (
+const AboutPage = ({data}) => (
   <Layout>
     <Seo
       title="About"
@@ -18,7 +19,19 @@ const AboutPage = () => (
         Not much else to say at this point.
       </p>
     </div>
+    <div dangerouslySetInnerHTML={{ __html: data.wpPage.schemaMarkup.schemaMarkup}} />
   </Layout>
 )
 
 export default AboutPage
+
+export const query = graphql`
+query AboutPageQuery {
+  wpPage(title: {eq: "About"}) {
+    id
+    schemaMarkup {
+      schemaMarkup
+    }
+  }
+}
+`

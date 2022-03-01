@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
+import {WebPageSchema} from '../components/Schema/WebPage'
 
 import Layout from '../components/layout'
 import Seo from '../components/head'
@@ -55,6 +56,7 @@ const Post = ({
         <div dangerouslySetInnerHTML={{ __html: content }} />
         <div className="text-right">{date}</div>
       </article>
+      <WebPageSchema name={title} description={seo.metaDesc} uri={uri} />
     </Layout>
   )
 }
