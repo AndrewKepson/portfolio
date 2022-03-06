@@ -4,11 +4,12 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Seo from '../components/head'
 
-const AboutPage = ({data}) => (
+const AboutPage = ({ data: { wpPage: { seo, schemaMarkup: { schemaMarkup} } } }) => (
   <Layout>
     <Seo
-      title="About"
-      description="Andrew Kepson is a digital marketing professional focused on technical SEO for modern websites built in JavaScript frameworks, based in Colorado. Learn more here."
+      title={seo.title}
+      description={seo.metaDesc}
+      canonical={seo.canonical}
     />
     <div className="flex flex-col">
       <h1 className="font-roboto text-4xl text-gray-700">About</h1>
@@ -19,9 +20,10 @@ const AboutPage = ({data}) => (
         Not much else to say at this point.
       </p>
     </div>
-    <div dangerouslySetInnerHTML={{ __html: data.wpPage.schemaMarkup.schemaMarkup}} />
+    <div dangerouslySetInnerHTML={{ __html: schemaMarkup}} />
   </Layout>
 )
+
 
 export default AboutPage
 
@@ -29,6 +31,11 @@ export const query = graphql`
 query AboutPageQuery {
   wpPage(title: {eq: "About"}) {
     id
+    seo {
+      title
+      metaDesc
+      canonical
+    }
     schemaMarkup {
       schemaMarkup
     }

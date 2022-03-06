@@ -5,8 +5,6 @@ import { useSiteMetadata } from '../hooks/useSiteMetadata'
 import Layout from '../components/layout'
 import Seo from '../components/head'
 
-import Classes from '../styles/classes'
-
 const Post = ({
   data: {
     wpPost: {
@@ -21,8 +19,8 @@ const Post = ({
     },
   },
 }) => {
-  const tags = [...postTags.nodes.map(tag => tag.name)]
-  const category = categories.nodes[0].name
+  // const tags = [...postTags.nodes.map(tag => tag.name)]
+  // const category = categories.nodes[0].name
 
   const {
     site: {
@@ -36,6 +34,8 @@ const Post = ({
         title={seo.title}
         description={seo.metaDesc}
         canonical={`${siteUrl}${uri}`}
+        ogImage={seo.twitterImage.localFile.childImageSharp.resize.src}
+        ogImageAltText={seo.twitterImage.altText}
       />
       <article className="mb-16 mx-auto prose prose-headings:font-roboto prose-headings:font-semibold prose-h1:text-gray-800 prose-h1:text-5xl prose-h1:text-center prose-h2:text-gray-700 prose-h2:text-4xl prose-h3:text-gray-600 prose-h3:text-3xl prose-a:no-underline prose-a:text-purple-600 hover:prose-a:text-purple-400 font-work-sans text-lg md:text-xl text-gray-900 leading-relaxed prose-img:shadow-xl max-w-full md:w-2/3 lg:w-1/2">
         <h1>{title}</h1>
@@ -56,9 +56,16 @@ export const query = graphql`
         canonical
         title
         metaDesc
-        metaKeywords
-        schema {
-          raw
+        twitterImage {
+          sourceUrl
+          altText
+          localFile {
+            childImageSharp {
+              resize(width: 900, quality: 90) {
+                src
+              }
+            }
+          }
         }
       }
       uri

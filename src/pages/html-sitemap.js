@@ -1,15 +1,17 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import Seo from '../components/head'
 import Layout from '../components/layout'
 
 const HTMLSitemap = () => (
   <Layout>
+    <Seo title="HTML Sitemap" description="Sitemap to easily find Andrew Kepson's blog posts and other pages." />
     <div className="h-full grid grid-cols-1 place-content-around text-xl">
       <ul>
         <li>
           <Link className="hover:text-purple-400" to="/">
-            Home
+            Headless WordPress Developer Andrew Kepson - Home
           </Link>
         </li>
         <li>
