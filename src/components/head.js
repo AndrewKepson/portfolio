@@ -31,7 +31,7 @@ const Seo = ({ title, description, meta = [], canonical, ogImage = '', ogImageAl
         },
         {
 					name: 'og:image',
-					content: ogImage,
+					content: `${site.siteMetadata.siteUrl}${ogImage}`,
 				},
         {
           name: `twitter:card`,
