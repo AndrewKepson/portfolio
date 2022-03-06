@@ -30,31 +30,31 @@ const Seo = ({ title, description, meta = [], canonical, ogImage = '', ogImageAl
           content: `website`,
         },
         {
-					name: 'og:image',
+					property: 'og:image',
 					content: `${site.siteMetadata.siteUrl}${ogImage}`,
 				},
         {
-          name: `twitter:card`,
+          property: `twitter:card`,
           content: `summary`,
         },
         {
-          name: `twitter:creator`,
+          property: `twitter:creator`,
           content: site.siteMetadata?.author || ``,
         },
         {
-          name: `twitter:title`,
+          property: `twitter:title`,
           content: title,
         },
         {
-          name: `twitter:description`,
+          property: `twitter:description`,
           content: metaDescription,
         },
         {
-					name: 'twitter:image',
+					property: 'twitter:image',
 					content: `${site.siteMetadata.siteUrl}${ogImage}`,
 				},
         {
-					name: 'twitter:image:alt',
+					property: 'twitter:image:alt',
 					content: ogImageAltText,
 				}
       ].concat(meta)}
