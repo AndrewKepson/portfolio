@@ -27,11 +27,11 @@ const AboutPageContent = () => {
     <div className={about.wrapper}>
       <div className={about.textContainer}>
         <Fade bottom>
-          <h2 className={about.heading}>I'm Andrew</h2>
+          <h1 className={about.heading}>Headless WordPress Developer Andrew Kepson</h1>
         </Fade>
         <Fade bottom>
           <p className={about.leadingRelaxed}>
-            Digital marketing. SEO. Content. JavaScript. Focused on site speed,
+            Headless WordPress development. SEO. Content. JavaScript. Focused on site speed,
             privacy-first marketing, and bridging the gap between web
             development and marketing.
           </p>
