@@ -13,6 +13,7 @@ const BlogPage = ({ data: { wpPage: { seo, schemaMarkup: { schemaMarkup} } } }) 
       canonical={seo.canonical}
     />
     <BlogPageContent />
+    <div dangerouslySetInnerHTML={{ __html: schemaMarkup}} />
   </Layout>
 )
 
