@@ -5,13 +5,14 @@ import Layout from '../components/layout'
 import Seo from '../components/head'
 import ContactPageContent from '../components/ContactPage'
 
-const ContactPage = ({ data: { wpPage: { schemaMarkup: {schemaMarkup} }} }) => {
+const ContactPage = ({ data: { wpPage: { seo, schemaMarkup: { schemaMarkup} } } }) => {
   return (
     <Layout>
-      <Seo
-        title="Contact"
-        description="Contact me if you are interested in learning more about SEO, web development, or any of the other topics that I blog about here."
-      />
+    <Seo
+      title={seo.title}
+      description={seo.metaDesc}
+      canonical={seo.canonical}
+    />
       <ContactPageContent />
       <div dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
     </Layout>
@@ -24,6 +25,11 @@ export const query = graphql`
 query ContactPageQuery {
   wpPage(title: {eq: "Contact"}) {
     id
+    seo {
+      title
+      metaDesc
+      canonical
+    }
     schemaMarkup {
       schemaMarkup
     }

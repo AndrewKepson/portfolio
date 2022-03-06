@@ -5,20 +5,17 @@ import Layout from '../components/layout'
 import Seo from '../components/head'
 import HomePageContent from '../components/HomePage'
 
-const IndexPage = ({ data }) => {
-  const {schemaMarkup} = data.wpPage.schemaMarkup
-
-  return (
-    <Layout>
-      <Seo
-        title="Home"
-        description="Andrew Kepson is a digital marketing professional based in Colorado. In addition to SEO, he also enjoys trail running, reading, and occasional blogging."
-      />
-      <HomePageContent />
-      <div dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
-    </Layout>
-  )
-}
+const IndexPage = ({ data: { wpPage: { seo, schemaMarkup: { schemaMarkup} } } }) => (
+  <Layout>
+    <Seo
+      title={seo.title}
+      description={seo.metaDesc}
+      canonical={seo.canonical}
+    />
+    <HomePageContent />
+    <div dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
+  </Layout>
+)
 
 export default IndexPage
 
@@ -26,6 +23,11 @@ export const query = graphql`
 query HomePageQuery {
   wpPage(title: {eq: "Home"}) {
     id
+    seo {
+      title
+      metaDesc
+      canonical
+    }
     schemaMarkup {
       schemaMarkup
     }
