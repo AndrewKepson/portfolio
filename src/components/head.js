@@ -3,7 +3,14 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
 
-const Seo = ({ title, description, meta = [], canonical, ogImage = '', ogImageAltText = '' }) => {
+const Seo = ({
+  title,
+  description,
+  meta = [],
+  canonical,
+  ogImage = '',
+  ogImageAltText = '',
+}) => {
   const { site } = useSiteMetadata()
 
   const metaDescription = description || site.siteMetadata.description
@@ -30,9 +37,9 @@ const Seo = ({ title, description, meta = [], canonical, ogImage = '', ogImageAl
           content: `website`,
         },
         {
-					property: 'og:image',
-					content: `${site.siteMetadata.siteUrl}${ogImage}`,
-				},
+          property: 'og:image',
+          content: `${site.siteMetadata.siteUrl}${ogImage}`,
+        },
         {
           property: `twitter:card`,
           content: `summary`,
@@ -50,13 +57,13 @@ const Seo = ({ title, description, meta = [], canonical, ogImage = '', ogImageAl
           content: metaDescription,
         },
         {
-					property: 'twitter:image',
-					content: `${site.siteMetadata.siteUrl}${ogImage}`,
-				},
+          property: 'twitter:image',
+          content: `${site.siteMetadata.siteUrl}${ogImage}`,
+        },
         {
-					property: 'twitter:image:alt',
-					content: ogImageAltText,
-				}
+          property: 'twitter:image:alt',
+          content: ogImageAltText,
+        },
       ].concat(meta)}
     >
       <title>{title}</title>
@@ -69,7 +76,7 @@ Seo.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   canonical: PropTypes.string,
-  ogImage: PropTypes.string
+  ogImage: PropTypes.string,
 }
 
 export default Seo

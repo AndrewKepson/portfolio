@@ -7,7 +7,7 @@ import NorthCarolinaPhotos from './NorthCarolinaPhotos'
 import CityPhotos from './CityPhotos'
 
 const Gallery = () => (
-  <div className="grid grid-cols-1 grid-rows-1 gap-2 w-full md:m-4 lg:m-8">
+  <div className="grid w-full grid-cols-1 grid-rows-1 gap-2 md:m-4 lg:m-8">
     <MainImages />
     <ColoradoPhotos />
     <UtahPhotos />

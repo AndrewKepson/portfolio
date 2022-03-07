@@ -11,8 +11,8 @@ const ThankYouPage = () => (
       title="Thank You for Contacting Me | Andrew Kepson"
       description="Thank you for contacting me."
     />
-    <div className="flex flex-col h-full lg:mx-16">
-      <section class="bg-gray-800 flex flex-col w-full p-4 items-center justify-center">
+    <div className="flex h-full flex-col lg:mx-16">
+      <section class="flex w-full flex-col items-center justify-center bg-gray-800 p-4">
         <h1 class="text-5xl text-gray-100">Thank You</h1>
         <p class="mt-10 p-10 text-gray-100 md:p-0">
           Thank you for contacting me.&nbsp;

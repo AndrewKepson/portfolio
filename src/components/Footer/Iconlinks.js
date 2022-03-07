@@ -6,7 +6,7 @@ import Github from './Github'
 
 export default function IconLinks() {
   return (
-    <div className="flex-wrap inline-flex self-center space-x-4">
+    <div className="inline-flex flex-wrap space-x-4 self-center">
       <Twitter />
       <LinkedIn />
       <Github />

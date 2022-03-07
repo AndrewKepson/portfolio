@@ -36,18 +36,18 @@ export default function NorthCarolinaPhotos() {
   `)
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-4">
+    <section className="grid grid-cols-1 gap-4 md:grid-cols-3 md:grid-rows-3">
       <div className="md:col-span-3 md:row-span-2">
         <GatsbyImage
           image={getImage(data.blueRidge)}
-          className="rounded shadow-2xl object-cover"
+          className="rounded object-cover shadow-2xl"
           alt="The Blue Ridge Mountains in North Carolina"
           placeholder="blurred"
           layout="fullWidth"
           quality={90}
         />
       </div>
-      <div className="md:col-span-4 md:row-span-1 grid gap-4 md:grid-cols-2">
+      <div className="grid gap-4 md:col-span-4 md:row-span-1 md:grid-cols-2">
         <GatsbyImage
           image={getImage(data.fallColors)}
           className="rounded shadow-2xl"

@@ -3,7 +3,7 @@ import React from 'react'
 import FooterContent from './FooterContent'
 
 const Footer = () => (
-  <footer className="bg-gray-200 flex-col font-light items-center justify-center pt-10 text-gray-500 p-4  pin-b w-full">
+  <footer className="pin-b w-full flex-col items-center justify-center bg-gray-200 p-4 pt-10  font-light text-gray-500">
     <FooterContent />
   </footer>
 )

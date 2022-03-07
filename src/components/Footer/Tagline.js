@@ -15,7 +15,7 @@ export default function Tagline() {
   `)
   return (
     <div className="py-4 text-sm">
-      <hr className="border-gray-400 mb-4 mx-8" />
+      <hr className="mx-8 mb-4 border-gray-400" />
       <Copyright author={data.site.siteMetadata.author} />
     </div>
   )

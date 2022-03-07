@@ -1,10 +1,4 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-
-import WritingSample from './WritingSample'
-
-import Classes from '../../../styles/classes'
-const { writingSamples } = Classes.components
 
 const WritingSamples = () => {
   // const data = useStaticQuery(graphql`
@@ -31,8 +25,8 @@ const WritingSamples = () => {
   // const { edges } = data.allFile
 
   return (
-    <div className={writingSamples.container}>
-      <div className={writingSamples.content}>
+    <div>
+      <div>
         {/* {edges.map(sample => {
           const {
             node: {

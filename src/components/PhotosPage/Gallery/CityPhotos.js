@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 
 const CityPhotos = () => (
-  <section className="grid grid-flow-row grid-cols-1 md:grid-cols-2 gap-4">
+  <section className="grid grid-flow-row grid-cols-1 gap-4 md:grid-cols-2">
     <div>
       <StaticImage
         src="../../../images/portfolio-photos/cities/STUYVESANT_ST.JPG"

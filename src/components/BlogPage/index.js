@@ -6,11 +6,7 @@ import NothingHere from './NothingHere'
 import BlogPost from './BlogPost'
 
 const BlogPageContent = () => {
-  const {
-    allWpPost: { edges: posts },
-  } = useWordPressPosts()
-
-  const allPosts = posts.map(post => post.node)
+  const allPosts = useWordPressPosts()
 
   const [displayedPosts, setDisplayedPosts] = useState({
     allPosts,
@@ -70,7 +66,7 @@ const BlogPageContent = () => {
   }
 
   return (
-    <div className="flex flex-wrap -mx-4 justify-center">
+    <div className="-mx-4 flex flex-wrap justify-center">
       <Sidebar
         posts={allPosts}
         searchedName={null}
@@ -78,7 +74,7 @@ const BlogPageContent = () => {
         filterByCategory={filterByCategory}
         onClear={onClear}
       />
-      <div className="p-4 w-full lg:w-7/12 xl:w-8/12">
+      <div className="w-full p-4 lg:w-7/12 xl:w-8/12">
         <div>
           {displayedPosts.displayedPosts.length > 0 ? (
             displayedPosts.displayedPosts.map(post => {

@@ -50,5 +50,5 @@ export const useWordPressPosts = () => {
     }
   `)
 
-  return data
+  return [...data.allWpPost.edges.map(edge => edge.node)]
 }
