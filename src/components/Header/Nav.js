@@ -7,6 +7,7 @@ import Brand from './Brand'
 
 const navigation = [
   { name: 'Home', to: '/' },
+  { name: 'Headless WordPress', to: '/headless-wordpress-developer' },
   { name: 'Portfolio', to: '/portfolio' },
   { name: 'Blog', to: '/blog' },
   { name: 'About', to: '/about' },

@@ -18,8 +18,11 @@ const LatestBlogPosts = () => {
             Latest Blog Posts
           </h3>
           <p className="mx-auto mt-3 max-w-2xl font-work-sans text-xl text-gray-500 sm:mt-4">
-            My blog is focused on headless WordPress developer and digital
-            marketing resources, and occasionally topics in blockchain.
+            My blog is focused on{' '}
+            <Link to="/headless-wordpress-developer">
+              headless WordPress development
+            </Link>
+            , digital marketing, and occasionally topics in blockchain.
           </p>
         </div>
         <div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">

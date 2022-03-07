@@ -6,7 +6,7 @@ import { headlessWPFAQs } from '../../data/headlessWPFAQs'
 
 const classNames = (...classes) => classes.filter(Boolean).join(' ')
 
-const HeadlessWPFAQs = () => (
+export const HeadlessWPFAQs = () => (
   <div className="w-full">
     <div className="mx-auto max-w-7xl py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-3xl divide-y-2 divide-gray-200">
@@ -48,5 +48,3 @@ const HeadlessWPFAQs = () => (
     </div>
   </div>
 )
-
-export default HeadlessWPFAQs
