@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 
 const MainImages = () => (
-  <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
     <div className="col-span-1">
       <StaticImage
         src="../../../images/portfolio-photos/montana/MONTANA_RIVER.JPG"

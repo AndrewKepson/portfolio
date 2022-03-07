@@ -49,7 +49,7 @@ const Post = ({
 export default Post
 
 export const query = graphql`
-  query ($id: String!) {
+  query($id: String!) {
     wpPost(id: { eq: $id }) {
       id
       seo {

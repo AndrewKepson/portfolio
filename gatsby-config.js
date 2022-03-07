@@ -6,6 +6,7 @@ module.exports = {
     author: `Andrew Kepson`,
     siteUrl: `https://andrewkepson.com`,
   },
+  trailingSlash: "always",
   plugins: [
     {
       resolve: `gatsby-plugin-google-analytics`,

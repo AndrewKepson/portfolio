@@ -21,8 +21,8 @@ const NothingHere = () => {
   `)
 
   return (
-    <article className="bg-white h-full rounded shadow-xl flex mb-6">
-      <div className="h-full flex flex-col flex-wrap">
+    <article className="mb-6 flex h-full rounded bg-white shadow-xl">
+      <div className="flex h-full flex-col flex-wrap">
         <div className="w-full">
           <GatsbyImage
             image={getImage(data.montanaPhoto)}
@@ -31,11 +31,11 @@ const NothingHere = () => {
           />
         </div>
         <div className="p-6">
-          <h3 className="font-heading text-3xl md:text-5xl text-gray-800">
+          <h3 className="font-heading text-3xl text-gray-800 md:text-5xl">
             Nothing to See Here Yet...
           </h3>
           <div>
-            <p className="font-body font-light text-2xl text-gray-700">
+            <p className="font-body text-2xl font-light text-gray-700">
               Don't see what you're looking for?{' '}
               <Link
                 to="/contact"

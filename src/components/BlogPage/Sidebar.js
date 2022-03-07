@@ -14,18 +14,18 @@ const Sidebar = ({
   } = useWordPressCategories()
 
   return (
-    <aside className="hidden p-4 w-full lg:block lg:order-1 lg:w-5/12 xl:w-4/12">
-      <div className="bg-gray-200 bg-opacity-70 p-6 rounded-sm shadow-lg sticky top-20">
+    <aside className="hidden w-full p-4 lg:order-1 lg:block lg:w-5/12 xl:w-4/12">
+      <div className="sticky top-20 rounded-sm bg-gray-200 bg-opacity-70 p-6 shadow-lg">
         <form>
-          <div className="mb-4 relative">
+          <div className="relative mb-4">
             <input
-              className="appearance-none border border-gray-300 pl-4 pr-10 py-4 rounded w-full"
+              className="w-full appearance-none rounded border border-gray-300 py-4 pl-4 pr-10"
               placeholder="Looking for?"
               type="text"
               required=""
               onChange={filterBySearch}
             />
-            <span className="absolute inline-flex inset-y-0 items-center right-4 text-gray-600">
+            <span className="absolute inset-y-0 right-4 inline-flex items-center text-gray-600">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -40,10 +40,10 @@ const Sidebar = ({
               </svg>
             </span>
           </div>
-          <div className="mb-4 relative">
+          <div className="relative mb-4">
             <select
               required=""
-              className="appearance-none border border-gray-300 pl-4 pr-10 py-4 rounded w-full"
+              className="w-full appearance-none rounded border border-gray-300 py-4 pl-4 pr-10"
               onChange={filterByCategory}
             >
               <option value="all" selected>
@@ -55,7 +55,7 @@ const Sidebar = ({
                 </option>
               ))}
             </select>
-            <span className="absolute inline-flex inset-y-0 items-center right-4 text-gray-600">
+            <span className="absolute inset-y-0 right-4 inline-flex items-center text-gray-600">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -71,7 +71,7 @@ const Sidebar = ({
 
           <div className="text-right">
             <button
-              className="bg-purple-600 hover:bg-purple-400 inline-block px-6 py-2 rounded-full shadow-lg text-center text-white"
+              className="inline-block rounded-full bg-purple-600 px-6 py-2 text-center text-white shadow-lg hover:bg-purple-400"
               type="submit"
               onClick={onClear}
             >

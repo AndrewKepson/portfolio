@@ -4,10 +4,6 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { CodePortfolio } from '../../../data/codeProjectsPortfolio'
 import DevelopmentCard from './DevelopmentCard'
 
-import Classes from '../../../styles/classes'
-
-const { developmentCard } = Classes.components
-
 const DevelopmentCards = () => {
   const data = useStaticQuery(graphql`
     query projectPhotos {
@@ -38,14 +34,7 @@ const DevelopmentCards = () => {
         const source = data.allFile.edges.find(
           edge => edge.node.name === project.photo
         )
-        return (
-          <DevelopmentCard
-            key={i}
-            classes={developmentCard}
-            imgSrc={source}
-            project={project}
-          />
-        )
+        return <DevelopmentCard key={i} imgSrc={source} project={project} />
       })}
     </div>
   )

@@ -4,19 +4,19 @@ import Fade from 'react-reveal/Fade'
 import DevelopmentCardContent from './DevelopmentCardContent'
 import DevelopmentCardImage from './DevelopmentCardImage'
 
-export default function DevelopmentCard({ classes, imgSrc, project }) {
-  return (
-    <Fade bottom>
-      <div className={classes.card}>
-        <div className={classes.cardLayout}>
-          <DevelopmentCardImage
-            classes={classes}
-            imgSrc={imgSrc}
-            altText={project.altText}
-          />
-          <DevelopmentCardContent classes={classes} project={project} />
-        </div>
+const DevelopmentCard = ({ classes, imgSrc, project }) => (
+  <Fade bottom>
+    <div className="mb-5 h-full bg-gray-100 px-4 py-6 shadow-lg lg:pb-0">
+      <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
+        <DevelopmentCardImage
+          classes={classes}
+          imgSrc={imgSrc}
+          altText={project.altText}
+        />
+        <DevelopmentCardContent classes={classes} project={project} />
       </div>
-    </Fade>
-  )
-}
+    </div>
+  </Fade>
+)
+
+export default DevelopmentCard
