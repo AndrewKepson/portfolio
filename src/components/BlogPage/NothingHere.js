@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { useStaticQuery, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
-const NothingHere = () => {
+export const NothingHere = () => {
   const data = useStaticQuery(graphql`
     {
       montanaPhoto: file(name: { eq: "MONTANA_RIVER" }) {
@@ -51,5 +51,3 @@ const NothingHere = () => {
     </article>
   )
 }
-
-export default NothingHere

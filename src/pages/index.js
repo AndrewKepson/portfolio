@@ -1,9 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/layout'
-import Seo from '../components/head'
-import HomePageContent from '../components/HomePage'
+import { Layout, Seo, HomePageContent } from '../components/components'
 
 const IndexPage = ({
   data: {
@@ -18,6 +16,8 @@ const IndexPage = ({
       title={seo.title}
       description={seo.metaDesc}
       canonical={seo.canonical}
+      ogImage={seo.twitterImage.localFile.childImageSharp.resize.src}
+      ogImageAltText={seo.twitterImage.altText}
     />
     <HomePageContent />
     <div dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
@@ -34,6 +34,17 @@ export const query = graphql`
         title
         metaDesc
         canonical
+        twitterImage {
+          sourceUrl
+          altText
+          localFile {
+            childImageSharp {
+              resize(width: 900, quality: 90) {
+                src
+              }
+            }
+          }
+        }
       }
       schemaMarkup {
         schemaMarkup

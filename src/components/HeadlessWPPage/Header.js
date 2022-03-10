@@ -9,11 +9,8 @@ export const Header = () => (
       </h1>
       <div className="flex flex-wrap items-center">
         <div className="mb-6 inline-block max-w-xl md:mb-0">
-          <p className="text-xl text-gray-500">
+          <p className="font-work-sans text-xl text-gray-800">
             Blast past your competitors with a headless WordPress website.
-          </p>
-          <p className="text-xl text-gray-500">
-            Find out if your website should powered by headless WordPress.
           </p>
         </div>
         <Link

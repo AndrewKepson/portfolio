@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 
-import Seo from '../components/head'
-import Layout from '../components/layout'
+import { Layout, Seo } from '../components/components'
 
 const HTMLSitemap = () => {
   const { wpPosts } = useStaticQuery(graphql`
@@ -24,7 +23,7 @@ const HTMLSitemap = () => {
         title="HTML Sitemap"
         description="Sitemap to easily find Andrew Kepson's blog posts and other pages."
       />
-      <div className="h-full grid grid-cols-1 place-content-around text-xl">
+      <div className="grid h-full grid-cols-1 place-content-around text-xl">
         <ul>
           <li>
             <Link className="hover:text-purple-400" to="/">

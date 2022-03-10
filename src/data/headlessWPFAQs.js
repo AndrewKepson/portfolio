@@ -19,4 +19,14 @@ export const headlessWPFAQs = [
     answer:
       'Headless WordPress developers build functional websites using WordPress to power the content and high-performance front ends and user interfaces using modern web development technologies.',
   },
+  {
+    question: 'Is headless WordPress right for me?',
+    answer:
+      'If you want to operate a small blog as a hobby or have a very small budget, headless WordPress might not be right for you - yet. Consider getting started with a regular WordPress website and upgrading to headless later. I’d be happy to connect you with a WordPress developer who can bring your vision to life.',
+  },
+  {
+    question: 'What’s the difference between headless WordPress & Jamstack?',
+    answer:
+      'Headless WordPress websites are a type of Jamstack site. Jamstack websites are built with JavaScript, Markup, and APIs - meaning the front end can connect with any or multiple backends. A headless WordPress website uses WordPress to manage the content for the markup, and the WordPress API to access the data, so that you can easily create and update content without having to worry about code.',
+  },
 ]

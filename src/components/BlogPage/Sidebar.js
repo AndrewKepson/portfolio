@@ -1,17 +1,14 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import { useWordPressCategories } from '../../hooks/useWordPressCategories'
 
-const Sidebar = ({
+export const Sidebar = ({
   posts,
   searchedName,
   filterBySearch,
   filterByCategory,
   onClear,
 }) => {
-  const {
-    allWpCategory: { edges: categories },
-  } = useWordPressCategories()
+  const categories = useWordPressCategories()
 
   return (
     <aside className="hidden w-full p-4 lg:order-1 lg:block lg:w-5/12 xl:w-4/12">
@@ -50,8 +47,8 @@ const Sidebar = ({
                 All Categories
               </option>
               {categories.map(category => (
-                <option key={category.node.id} value={category.node.name}>
-                  {category.node.name}
+                <option key={category.id} value={category.name}>
+                  {category.name}
                 </option>
               ))}
             </select>

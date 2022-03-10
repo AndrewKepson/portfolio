@@ -2,8 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
 
-import Layout from '../components/layout'
-import Seo from '../components/head'
+import { Layout, Seo } from '../components/components'
 
 const Post = ({
   data: {
@@ -22,11 +21,7 @@ const Post = ({
   // const tags = [...postTags.nodes.map(tag => tag.name)]
   // const category = categories.nodes[0].name
 
-  const {
-    site: {
-      siteMetadata: { siteUrl },
-    },
-  } = useSiteMetadata()
+  const { siteUrl } = useSiteMetadata()
 
   return (
     <Layout>
@@ -37,7 +32,7 @@ const Post = ({
         ogImage={seo.twitterImage.localFile.childImageSharp.resize.src}
         ogImageAltText={seo.twitterImage.altText}
       />
-      <article className="mb-16 mx-auto prose prose-headings:font-roboto prose-headings:font-semibold prose-h1:text-gray-800 prose-h1:text-5xl prose-h1:text-center prose-h2:text-gray-700 prose-h2:text-4xl prose-h3:text-gray-600 prose-h3:text-3xl prose-a:no-underline prose-a:text-purple-600 hover:prose-a:text-purple-400 font-work-sans text-lg md:text-xl text-gray-900 leading-relaxed prose-img:shadow-xl max-w-full md:w-2/3 lg:w-1/2">
+      <article className="prose mx-auto mb-16 max-w-full font-work-sans text-lg leading-relaxed text-gray-900 prose-headings:font-roboto prose-headings:font-semibold prose-h1:text-center prose-h1:text-5xl prose-h1:text-gray-800 prose-h2:text-4xl prose-h2:text-gray-700 prose-h3:text-3xl prose-h3:text-gray-600 prose-a:text-purple-600 prose-a:no-underline hover:prose-a:text-purple-400 prose-img:shadow-xl md:w-2/3 md:text-xl lg:w-1/2">
         <h1>{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: content }} />
         <div className="text-right">{date}</div>
@@ -49,7 +44,7 @@ const Post = ({
 export default Post
 
 export const query = graphql`
-  query($id: String!) {
+  query ($id: String!) {
     wpPost(id: { eq: $id }) {
       id
       seo {
@@ -57,7 +52,6 @@ export const query = graphql`
         title
         metaDesc
         twitterImage {
-          sourceUrl
           altText
           localFile {
             childImageSharp {

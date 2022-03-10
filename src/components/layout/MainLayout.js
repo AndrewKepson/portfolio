@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Header from '../Header'
+import { Header } from '../components'
 import { Footer } from '../components'
 
-const Layout = ({ children }) => (
+export const Layout = ({ children }) => (
   <div className="m-0 h-screen w-full overflow-x-hidden bg-gray-200 p-0">
     <Header />
     <div className="flex min-h-full flex-col px-4 text-gray-500 lg:px-16 lg:py-6">
@@ -12,5 +12,3 @@ const Layout = ({ children }) => (
     <Footer />
   </div>
 )
-
-export default Layout

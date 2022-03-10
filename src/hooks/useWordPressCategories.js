@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from 'gatsby'
 
 export const useWordPressCategories = () => {
-  const data = useStaticQuery(graphql`
+  const { allWpCategory } = useStaticQuery(graphql`
     query WordPressCategoriesQuery {
       allWpCategory {
         edges {
@@ -46,5 +46,5 @@ export const useWordPressCategories = () => {
     }
   `)
 
-  return data
+  return [...allWpCategory.edges.map(edge => edge.node)]
 }

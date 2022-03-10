@@ -3,9 +3,9 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import Fade from 'react-reveal/Fade'
 import { usePortraitPhoto } from '../../hooks/usePortraitPhoto'
 
-import LatestBlogPosts from './LatestBlogPosts'
+import { LatestBlogPosts } from './LatestBlogPosts'
 
-const HomePageContent = () => (
+export const HomePageContent = () => (
   <div className="-mb-4 flex flex-wrap items-center text-gray-500 md:mb-0 lg:px-12 lg:pt-12">
     <div className="mb-4 w-full px-2 text-xl md:mb-0 md:px-12 lg:w-1/2 lg:px-20 lg:text-lg">
       <Fade bottom>
@@ -33,5 +33,3 @@ const HomePageContent = () => (
     <LatestBlogPosts />
   </div>
 )
-
-export default HomePageContent

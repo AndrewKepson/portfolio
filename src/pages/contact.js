@@ -1,9 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/layout'
-import Seo from '../components/head'
-import { ContactPageContent } from '../components/components'
+import { Layout, Seo, ContactPageContent } from '../components/components'
 
 const ContactPage = ({
   data: {

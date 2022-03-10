@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
 
-const Seo = ({
+export const Seo = ({
   title,
   description,
   meta = [],
@@ -78,5 +78,3 @@ Seo.propTypes = {
   canonical: PropTypes.string,
   ogImage: PropTypes.string,
 }
-
-export default Seo

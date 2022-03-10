@@ -1,7 +1,6 @@
 import React from 'react'
 
-import Layout from '../components/layout'
-import Seo from '../components/head'
+import { Layout, Seo } from '../components/components'
 import PhotosPageContent from '../components/PhotosPage'
 
 const Photos = () => (
