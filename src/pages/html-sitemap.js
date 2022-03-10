@@ -28,7 +28,12 @@ const HTMLSitemap = () => {
         <ul>
           <li>
             <Link className="hover:text-purple-400" to="/">
-              Headless WordPress Developer Andrew Kepson - Home
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link className="hover:text-purple-400" to="/">
+              Headless WordPress Developer
             </Link>
           </li>
           <li>
