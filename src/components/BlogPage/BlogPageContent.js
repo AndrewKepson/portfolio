@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { useWordPressPosts } from '../../hooks/useWordPressPosts'
 
-import Sidebar from './Sidebar'
-import NothingHere from './NothingHere'
-import BlogPost from './BlogPost'
+import { BlogPost } from './BlogPost'
+import { Sidebar } from './Sidebar'
+import { NothingHere } from './NothingHere'
 
-const BlogPageContent = () => {
+export const BlogPageContent = () => {
   const allPosts = useWordPressPosts()
 
   const [displayedPosts, setDisplayedPosts] = useState({
@@ -93,5 +93,3 @@ const BlogPageContent = () => {
     </div>
   )
 }
-
-export default BlogPageContent

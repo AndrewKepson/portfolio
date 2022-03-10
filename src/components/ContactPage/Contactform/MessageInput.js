@@ -1,13 +1,15 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
-const MessageInput = ({ labelClass, inputClass }) => (
+export const MessageInput = () => (
   <div className="mb-6">
-    <label className={labelClass} htmlFor="messageInput">
+    <label
+      className="mb-2 block text-sm font-bold text-gray-700"
+      htmlFor="messageInput"
+    >
       Your Message:
     </label>
     <textarea
-      className={inputClass}
+      className="block w-full appearance-none rounded border border-gray-200 bg-gray-50 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
       name="message"
       id="messageInput"
       rows="5"
@@ -15,12 +17,3 @@ const MessageInput = ({ labelClass, inputClass }) => (
     ></textarea>
   </div>
 )
-
-MessageInput.propTypes = {
-  labelClass: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
-  inputClass: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-}
-
-export default MessageInput

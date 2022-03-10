@@ -3,7 +3,7 @@ import React from 'react'
 import { portfolioCardsData } from '../../../data/PortfolioCardsData'
 import { PortfolioCard } from './PortfolioCard'
 
-const RenderCards = () => (
+export const PortfolioCards = () => (
   <div className="flex flex-wrap justify-center">
     {portfolioCardsData.map((portfolio, i) => (
       <PortfolioCard
@@ -15,5 +15,3 @@ const RenderCards = () => (
     ))}
   </div>
 )
-
-export default RenderCards

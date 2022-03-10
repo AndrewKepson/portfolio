@@ -1,8 +1,6 @@
 import React from 'react'
 
-import Layout from '../components/layout'
-import Seo from '../components/head'
-import PortfolioPageContent from '../components/PortfolioPage'
+import { Layout, Seo, PortfolioPageContent } from '../components/components'
 
 const Portfolio = () => (
   <Layout>

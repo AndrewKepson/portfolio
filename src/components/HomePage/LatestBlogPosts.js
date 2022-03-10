@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 import { useWordPressPosts } from '../../hooks/useWordPressPosts'
 
-const LatestBlogPosts = () => {
+export const LatestBlogPosts = () => {
   const posts = [...useWordPressPosts().slice(0, 3)]
 
   return (
@@ -20,9 +20,9 @@ const LatestBlogPosts = () => {
           <p className="mx-auto mt-3 max-w-2xl font-work-sans text-xl text-gray-500 sm:mt-4">
             My blog is focused on{' '}
             <Link to="/headless-wordpress-developer">
-              headless WordPress development
+              headless WordPress developer{' '}
             </Link>
-            , digital marketing, and occasionally topics in blockchain.
+            resources, digital marketing, and occasionally topics in blockchain.
           </p>
         </div>
         <div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
@@ -67,4 +67,3 @@ const LatestBlogPosts = () => {
     </div>
   )
 }
-export default LatestBlogPosts

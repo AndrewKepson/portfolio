@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
 
-const Seo = ({
+export const Seo = ({
   title,
   description,
   meta = [],
@@ -11,9 +11,9 @@ const Seo = ({
   ogImage = '',
   ogImageAltText = '',
 }) => {
-  const { site } = useSiteMetadata()
+  const { siteUrl, description: siteDescription, author } = useSiteMetadata()
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || siteDescription
 
   return (
     <Helmet
@@ -38,7 +38,7 @@ const Seo = ({
         },
         {
           property: 'og:image',
-          content: `${site.siteMetadata.siteUrl}${ogImage}`,
+          content: `${siteUrl}${ogImage}`,
         },
         {
           property: `twitter:card`,
@@ -46,7 +46,7 @@ const Seo = ({
         },
         {
           property: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: author || ``,
         },
         {
           property: `twitter:title`,
@@ -58,7 +58,7 @@ const Seo = ({
         },
         {
           property: 'twitter:image',
-          content: `${site.siteMetadata.siteUrl}${ogImage}`,
+          content: `${siteUrl}${ogImage}`,
         },
         {
           property: 'twitter:image:alt',
@@ -78,5 +78,3 @@ Seo.propTypes = {
   canonical: PropTypes.string,
   ogImage: PropTypes.string,
 }
-
-export default Seo

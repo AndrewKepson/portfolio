@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { Popover } from '@headlessui/react'
 import { MenuIcon } from '@heroicons/react/outline'
 
-import Brand from './Brand'
+import { Brand } from './Brand'
 
 const navigation = [
   { name: 'Home', to: '/' },
@@ -14,7 +14,7 @@ const navigation = [
   { name: 'Contact', to: '/contact' },
 ]
 
-const Nav = () => (
+export const Nav = () => (
   <nav
     className="relative flex items-center justify-between sm:h-10 lg:justify-start"
     aria-label="Global"
@@ -43,5 +43,3 @@ const Nav = () => (
     </div>
   </nav>
 )
-
-export default Nav

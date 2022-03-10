@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from 'gatsby'
 
 export const useWPTags = () => {
-  const data = useStaticQuery(graphql`
+  const { allWpTag } = useStaticQuery(graphql`
     query WordPressTagsQuery {
       allWpTag {
         edges {
@@ -45,5 +45,5 @@ export const useWPTags = () => {
     }
   `)
 
-  return data
+  return [...allWpTag.edges.map(edge => edge.node)]
 }

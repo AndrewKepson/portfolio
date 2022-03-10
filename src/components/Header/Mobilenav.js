@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { Popover } from '@headlessui/react'
 import { XIcon } from '@heroicons/react/outline'
 
-import Brand from './Brand'
+import { Brand } from './Brand'
 
 const navigation = [
   { name: 'Home', to: '/' },
@@ -14,7 +14,7 @@ const navigation = [
   { name: 'Contact', to: '/contact' },
 ]
 
-const MobileNav = () => (
+export const MobileNav = () => (
   <div className="h-screen overflow-hidden rounded-lg bg-gray-900 font-work-sans shadow-md ring-1 ring-black ring-opacity-5">
     <div className="flex items-center justify-between px-5 pt-4">
       <Brand />

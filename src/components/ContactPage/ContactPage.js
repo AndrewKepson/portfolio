@@ -1,13 +1,13 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
 
-import ContactForm from './Contactform'
+import { ContactForm } from './Contactform'
 import Testimonials from './Testimonials'
 
-const ContactPageContent = () => (
+export const ContactPageContent = () => (
   <div>
     <Fade left>
-      <h1 className="text-3xl md:text-6xl text-gray-800 font-roboto mb-4">
+      <h1 className="mb-4 font-roboto text-3xl text-gray-800 md:text-6xl">
         Contact Me
       </h1>
     </Fade>
@@ -19,5 +19,3 @@ const ContactPageContent = () => (
     </Fade>
   </div>
 )
-
-export default ContactPageContent

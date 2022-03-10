@@ -3,12 +3,12 @@ import { Link } from 'gatsby'
 import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Fade from 'react-reveal/Fade'
 
-const BlogPost = ({ post, category }) => (
+export const BlogPost = ({ post, category }) => (
   <Fade bottom>
     <div className="mb-6 w-full">
-      <div className="bg-white flex flex-wrap h-full overflow-hidden rounded-md shadow-lg">
+      <div className="flex h-full flex-wrap overflow-hidden rounded-md bg-white shadow-lg">
         <div className="w-full md:w-5/12 lg:w-full xl:w-5/12">
-          <div className="h-full relative">
+          <div className="relative h-full">
             {' '}
             <Link
               to={post.uri}
@@ -18,12 +18,12 @@ const BlogPost = ({ post, category }) => (
                 <GatsbyImage
                   image={getImage(post.featuredImage.node.localFile)}
                   alt={post.featuredImage?.node.altText}
-                  className="h-full object-cover w-full"
+                  className="h-full w-full object-cover"
                 />
               ) : (
                 <StaticImage
                   src="../../images/stock/writing-notepad.jpg"
-                  className="h-full object-cover w-full"
+                  className="h-full w-full object-cover"
                   alt="Writing before blogs."
                   quality={90}
                 />
@@ -31,16 +31,16 @@ const BlogPost = ({ post, category }) => (
             </Link>
           </div>
         </div>
-        <div className="px-8 py-6 w-full md:w-7/12 lg:w-full xl:w-7/12">
+        <div className="w-full px-8 py-6 md:w-7/12 lg:w-full xl:w-7/12">
           <div className="mb-3">
             {' '}
             <span
-              className={` bg-opacity-75 font-medium inline-block py-1 rounded-sm text-xs uppercase`}
+              className={` inline-block rounded-sm bg-opacity-75 py-1 text-xs font-medium uppercase`}
             >
               {category}
             </span>
           </div>
-          <h3 className="font-heading font-semibold leading-tight mb-3 hover:text-purple-400">
+          <h3 className="font-heading mb-3 font-semibold leading-tight hover:text-purple-400">
             <Link to={post.uri}>{post.title}</Link>
           </h3>
           <p
@@ -49,11 +49,11 @@ const BlogPost = ({ post, category }) => (
           />
           <Link
             to={post.uri}
-            className="font-bold hover:text-purple-400 text-purple-600 text-sm"
+            className="text-sm font-bold text-purple-600 hover:text-purple-400"
           >
             Read more
           </Link>
-          <div className="border-t flex items-center justify-end mt-auto py-3 text-gray-600 text-xs w-full">
+          <div className="mt-auto flex w-full items-center justify-end border-t py-3 text-xs text-gray-600">
             <p>{post.date}</p>
           </div>
         </div>
