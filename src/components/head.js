@@ -8,8 +8,10 @@ export const Seo = ({
   description,
   meta = [],
   canonical,
-  ogImage = '',
-  ogImageAltText = '',
+  ogType = 'website',
+  ogImg = '',
+  ogImgAltText = '',
+  twitterImg = '',
 }) => {
   const { siteUrl, description: siteDescription, author } = useSiteMetadata()
 
@@ -34,11 +36,15 @@ export const Seo = ({
         },
         {
           property: `og:type`,
-          content: `website`,
+          content: ogType,
+        },
+        {
+          property: `og:url`,
+          content: canonical,
         },
         {
           property: 'og:image',
-          content: `${siteUrl}${ogImage}`,
+          content: `${siteUrl}${ogImg}`,
         },
         {
           property: `twitter:card`,
@@ -58,11 +64,11 @@ export const Seo = ({
         },
         {
           property: 'twitter:image',
-          content: `${siteUrl}${ogImage}`,
+          content: `${siteUrl}${twitterImg}`,
         },
         {
           property: 'twitter:image:alt',
-          content: ogImageAltText,
+          content: ogImgAltText,
         },
       ].concat(meta)}
     >

@@ -6,6 +6,14 @@ import { Layout, Seo } from '../components/components'
 const AboutPage = ({
   data: {
     wpPage: {
+      featuredImage: {
+        altText,
+        node: {
+          localFile: {
+            childImageSharp: { ogImg, twitterImg },
+          },
+        },
+      },
       seo,
       schemaMarkup: { schemaMarkup },
     },
@@ -16,8 +24,9 @@ const AboutPage = ({
       title={seo.title}
       description={seo.metaDesc}
       canonical={seo.canonical}
-      ogImage={seo.twitterImage.localFile.childImageSharp.resize.src}
-      ogImageAltText={seo.twitterImage.altText}
+      ogImg={ogImg.src}
+      ogImgAltText={altText}
+      twitterImg={twitterImg.src}
     />
     <div className="flex flex-col">
       <h1 className="font-roboto text-4xl text-gray-700">About</h1>
@@ -38,6 +47,30 @@ export const query = graphql`
   query AboutPageQuery {
     wpPage(title: { eq: "About" }) {
       id
+      featuredImage {
+        node {
+          localFile {
+            childImageSharp {
+              ogImg: resize(
+                cropFocus: ATTENTION
+                height: 630
+                width: 1200
+                quality: 90
+              ) {
+                src
+              }
+              twitterImg: resize(
+                cropFocus: ATTENTION
+                height: 120
+                width: 120
+                quality: 90
+              ) {
+                src
+              }
+            }
+          }
+        }
+      }
       seo {
         title
         metaDesc
