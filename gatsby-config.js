@@ -89,9 +89,18 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [`Work Sans`, `Poppins`, `Roboto`],
+        fonts: {
+          google: [
+            {
+              family: `Roboto`,
+            },
+            {
+              family: `Work Sans`,
+            },
+          ],
+        },
       },
     },
     `gatsby-plugin-sharp`,
