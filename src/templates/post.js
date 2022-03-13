@@ -41,7 +41,7 @@ const Post = ({
         ogImgAltText={altText}
         twitterImg={twitterImg.src}
       />
-      <article className="prose mx-auto mb-16 max-w-full font-work-sans text-lg leading-relaxed text-gray-900 prose-headings:font-roboto prose-headings:font-semibold prose-h1:text-center prose-h1:text-5xl prose-h1:text-gray-800 prose-h2:text-4xl prose-h2:text-gray-700 prose-h3:text-3xl prose-h3:text-gray-600 prose-a:text-purple-600 prose-a:no-underline hover:prose-a:text-purple-400 prose-img:shadow-xl md:w-2/3 md:text-xl lg:w-1/2">
+      <article className="prose mx-auto mb-16 max-w-full font-work-sans text-lg leading-relaxed text-gray-900 prose-headings:font-roboto prose-headings:font-semibold prose-h1:text-center prose-h1:text-5xl prose-h1:text-gray-800 prose-h2:text-4xl prose-h2:text-gray-700 prose-h3:text-3xl prose-h3:text-gray-600 prose-a:text-purple-600 prose-a:no-underline hover:prose-a:text-purple-500 prose-img:shadow-xl md:w-2/3 md:text-xl lg:w-1/2">
         <h1>{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: content }} />
         <div className="text-right">{date}</div>
