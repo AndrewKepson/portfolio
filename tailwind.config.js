@@ -3,7 +3,6 @@ module.exports = {
   theme: {
     fontFamily: {
       'work-sans': 'Work\\ Sans',
-      poppins: 'Poppins',
       roboto: 'Roboto',
     },
     extend: {},
