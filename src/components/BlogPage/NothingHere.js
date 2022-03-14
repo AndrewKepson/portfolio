@@ -9,7 +9,7 @@ export const NothingHere = () => (
         <StaticImage
           src="../../images/portfolio-photos/montana/MONTANA_RIVER.JPG"
           alt="Mountain lake in the autumn"
-          height="200"
+          layout="fullWidth"
         />
       </div>
       <div className="p-6">
