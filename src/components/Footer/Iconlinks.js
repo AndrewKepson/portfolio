@@ -3,9 +3,10 @@ import React from 'react'
 const Twitter = () => (
   <a
     href="https://twitter.com/AndrewKepson"
-    className="hover:text-purple-400"
+    className="hover:text-purple-500"
     target="_blank"
     rel="noreferrer"
+    title="Andrew Kepson's Twitter"
   >
     {' '}
     {/* Twitter Logo SVG */}
@@ -18,9 +19,10 @@ const Twitter = () => (
 const LinkedIn = () => (
   <a
     href="https://www.linkedin.com/in/andrewkepson/"
-    className="hover:text-purple-400"
+    className="hover:text-purple-500"
     target="/blank"
     rel="noreferrer"
+    title="Andrew Kepson's LinkedIn"
   >
     {' '}
     {/* LinkedIn Logo SVG */}
@@ -33,9 +35,10 @@ const LinkedIn = () => (
 const Github = () => (
   <a
     href="https://github.com/AndrewKepson"
-    className="hover:text-purple-400"
+    className="hover:text-purple-500"
     target="/blank"
     rel="noreferrer"
+    title="Andrew Kepson's GitHub"
   >
     {' '}
     {/* Github Logo SVG */}

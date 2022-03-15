@@ -10,7 +10,7 @@ export const PortfolioCard = ({ portfolio, description, href }) => {
 
   return (
     <div className="w-full p-4 lg:w-1/3">
-      <div className="flex h-full flex-col place-content-around justify-between rounded-lg bg-gray-100 px-6 py-16 shadow-lg">
+      <div className="flex h-full flex-col place-content-around justify-between rounded-lg px-6 py-16 shadow-lg">
         {chooseSvg(portfolio)}
         <h5 className="mb-2 text-xl font-bold text-gray-900">{portfolio}</h5>
         <p className="mb-4 text-lg">{description}</p>

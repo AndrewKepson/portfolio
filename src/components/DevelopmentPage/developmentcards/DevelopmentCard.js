@@ -6,7 +6,7 @@ import DevelopmentCardImage from './DevelopmentCardImage'
 
 const DevelopmentCard = ({ classes, imgSrc, project }) => (
   <Fade bottom>
-    <div className="mb-5 h-full bg-gray-100 px-4 py-6 shadow-lg lg:pb-0">
+    <div className="mb-5 h-full px-4 py-6 shadow-lg lg:pb-0">
       <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
         <DevelopmentCardImage
           classes={classes}

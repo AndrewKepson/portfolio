@@ -12,7 +12,7 @@ export const Sidebar = ({
 
   return (
     <aside className="hidden w-full p-4 lg:order-1 lg:block lg:w-5/12 xl:w-4/12">
-      <div className="sticky top-20 rounded-sm bg-gray-200 bg-opacity-70 p-6 shadow-lg">
+      <div className="sticky top-20 rounded-sm bg-opacity-70 p-6 shadow-lg">
         <form>
           <div className="relative mb-4">
             <input
