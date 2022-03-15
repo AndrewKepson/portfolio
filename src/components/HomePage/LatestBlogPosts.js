@@ -17,7 +17,7 @@ export const LatestBlogPosts = () => {
           <h3 className="font-roboto text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
             Latest Blog Posts
           </h3>
-          <p className="mx-auto mt-3 max-w-2xl font-work-sans text-xl text-gray-500 sm:mt-4">
+          <p className="mx-auto mt-3 max-w-2xl font-work-sans text-xl text-gray-700 sm:mt-4">
             My blog is focused on{' '}
             <Link to="/headless-wordpress-developer">
               headless WordPress developer{' '}

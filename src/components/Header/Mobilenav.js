@@ -6,11 +6,11 @@ import { XIcon } from '@heroicons/react/outline'
 import { Brand } from './Brand'
 
 const navigation = [
-  { name: 'Home', to: '/' },
+  // { name: 'Home', to: '/' },
+  { name: 'About', to: '/about' },
   { name: 'Headless WordPress', to: '/headless-wordpress-developer' },
   { name: 'Portfolio', to: '/portfolio' },
   { name: 'Blog', to: '/blog' },
-  { name: 'About', to: '/about' },
   { name: 'Contact', to: '/contact' },
 ]
 

@@ -6,11 +6,11 @@ import { MenuIcon } from '@heroicons/react/outline'
 import { Brand } from './Brand'
 
 const navigation = [
-  { name: 'Home', to: '/' },
+  // { name: 'Home', to: '/' },
+  { name: 'About', to: '/about' },
   { name: 'Headless WordPress', to: '/headless-wordpress-developer' },
   { name: 'Portfolio', to: '/portfolio' },
   { name: 'Blog', to: '/blog' },
-  { name: 'About', to: '/about' },
   { name: 'Contact', to: '/contact' },
 ]
 
@@ -35,7 +35,7 @@ export const Nav = () => (
         <Link
           key={item.name}
           to={item.to}
-          className="font-medium text-gray-500 hover:text-gray-900"
+          className="font-medium text-gray-700 hover:text-purple-600"
         >
           {item.name}
         </Link>
