@@ -29,4 +29,9 @@ export const headlessWPFAQs = [
     answer:
       'Headless WordPress websites are a type of Jamstack site. Jamstack websites are built with JavaScript, Markup, and APIs - meaning the front end can connect with any or multiple backends. A headless WordPress website uses WordPress to manage the content for the markup, and the WordPress API to access the data, so that you can easily create and update content without having to worry about code.',
   },
+  {
+    question: 'Can I switch from another CMS to headless WordPress?',
+    answer:
+      'Yes! If you have a Jamstack website, I can add WordPress to it and set up the integration to make your transition smooth and painless. If you are using a completely different type of website, we can also perform a professional headless WordPress migration to safely transfer all of your old content to a new high-performance headless website with WordPress.',
+  },
 ]

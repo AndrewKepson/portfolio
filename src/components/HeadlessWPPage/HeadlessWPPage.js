@@ -1,13 +1,17 @@
 import React from 'react'
 
-import { Header } from './Header'
-import { Marketing } from './Marketing'
-import { HeadlessWpReact } from './HeadlessWpReact'
-import { HeadlessWPFAQs } from './HeadlessWPFAQs'
+import {
+  Header,
+  Marketing,
+  WhyChooseWP,
+  HeadlessWpReact,
+  HeadlessWPFAQs,
+} from './components'
 
 export const HeadlessWPPageContent = () => (
   <div>
     <Header />
+    <WhyChooseWP />
     <Marketing />
     <HeadlessWpReact />
     <HeadlessWPFAQs />

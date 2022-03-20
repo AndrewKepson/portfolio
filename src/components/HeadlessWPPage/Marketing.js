@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Marketing = () => (
   <div className="relative">
-    <div className="relative mx-auto max-w-7xl py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+    <div className="relative mx-auto max-w-7xl py-8 px-4 sm:px-6 lg:px-8">
       <h2 className="font-roboto text-4xl tracking-tight text-gray-800 sm:text-5xl">
         A Headless WordPress Developer <wbr /> Your Marketing Team Will Love
       </h2>
