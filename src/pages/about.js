@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import { Layout, Seo } from '../components/components'
+import { Layout, Seo, AboutPageContent } from '../components/components'
 
 const AboutPage = ({
   data: {
@@ -28,15 +28,7 @@ const AboutPage = ({
       ogImgAltText={altText}
       twitterImg={twitterImg.src}
     />
-    <div className="flex flex-col">
-      <h1 className="font-roboto text-4xl text-gray-700">About</h1>
-      <p className="font-work-sans text-xl leading-loose text-gray-800">
-        I'm Andrew.
-      </p>
-      <p className="font-work-sans text-xl leading-loose text-gray-800">
-        Not much else to say at this point.
-      </p>
-    </div>
+    <AboutPageContent />
     <div dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
   </Layout>
 )
