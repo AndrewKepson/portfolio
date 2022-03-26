@@ -4,13 +4,7 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import { usePortraitPhoto } from '../../hooks/usePortraitPhoto'
 
 export const AboutPageContent = () => (
-  <section
-    className="bg-white py-20 xl:pt-24 xl:pb-28"
-    style={{
-      backgroundImage: 'url("./pattern-white.svg")',
-      backgroundPosition: 'center',
-    }}
-  >
+  <section className="bg-white py-20 xl:pt-24 xl:pb-28">
     <div className="container mx-auto px-4">
       <div className="-mx-4 flex flex-wrap">
         <div className="mb-14 w-full px-4">
