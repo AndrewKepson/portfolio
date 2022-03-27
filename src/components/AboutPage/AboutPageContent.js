@@ -32,7 +32,7 @@ export const AboutPageContent = () => (
         <div className="mb-5 w-full px-4 lg:mb-0 lg:w-1/2">
           <p className="mb-6 font-work-sans text-lg font-medium leading-7 text-gray-700">
             I'm Andrew Kepson. I'm a web developer and digital marketer based in
-            Colorado. With a passion for fast websites and{' '}
+            Colorado with a passion for building exceptionally fast websites.
           </p>
           <h3 className="mb-4 font-roboto text-2xl font-semibold text-gray-800 lg:text-3xl">
             How This All Started
@@ -77,9 +77,9 @@ export const AboutPageContent = () => (
           <p className="font-work-sans text-lg font-medium leading-7 text-gray-700">
             Upon graduating from University of Denver, I continued improving my
             knowledge and skills in SEO with a focus on SEO for React web
-            applications and organic ecommerce growth. Not satisfied with
-            improving sites built by others, I made the decision to move into
-            software full time. Now I work as a{' '}
+            applications, Core Web Vitals, and organic ecommerce growth. Not
+            satisfied with improving sites built by others, I made the decision
+            to move into software full time. Now I work as a{' '}
             <Link
               to="/headless-wordpress-developer/"
               className="text-purple-600 hover:text-purple-500"
