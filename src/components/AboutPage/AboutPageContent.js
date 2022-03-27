@@ -32,7 +32,7 @@ export const AboutPageContent = () => (
         <div className="mb-5 w-full px-4 lg:mb-0 lg:w-1/2">
           <p className="mb-6 font-work-sans text-lg font-medium leading-7 text-gray-700">
             I'm Andrew Kepson. I'm a web developer and digital marketer based in
-            Colorado. With a passion for fast websites and{' '}
+            Colorado with a passion for building exceptionally fast websites.
           </p>
           <h3 className="mb-4 font-roboto text-2xl font-semibold text-gray-800 lg:text-3xl">
             How This All Started
