@@ -42,10 +42,9 @@ export const Sidebar = ({
               required=""
               className="w-full appearance-none rounded border border-gray-300 py-4 pl-4 pr-10"
               onChange={filterByCategory}
+              defaultValue="all"
             >
-              <option value="all" selected>
-                All Categories
-              </option>
+              <option value="all">All Categories</option>
               {categories.map(category => (
                 <option key={category.id} value={category.name}>
                   {category.name}
