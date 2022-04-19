@@ -5,7 +5,7 @@ import { Nav } from './Nav'
 import { MobileNav } from './Mobilenav'
 
 export const Header = () => (
-  <header className="relative z-10 bg-white pb-6 sm:pt-6 md:pb-12 lg:sticky lg:top-0 lg:shadow-md">
+  <header className="relative z-10 bg-white pb-6 sm:pt-6 md:pb-12">
     <Popover>
       {({ open }) => (
         <>

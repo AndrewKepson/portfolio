@@ -13,7 +13,7 @@ import {
 const shareButtonClasses = 'rounded-md shadow-md hover:shadow-none'
 
 export const ShareButtons = ({ url, title, excerpt, hashtags }) => (
-  <div className="border-coolGray-100 mb-8 flex items-center gap-1 border-b pb-6">
+  <div className="border-coolGray-100 mb-8 mt-1 flex items-center gap-1 border-b pb-6">
     <FacebookShareButton url={url} quote={excerpt} hashtag={hashtags[0]}>
       <FacebookIcon size={32} className={shareButtonClasses} />
     </FacebookShareButton>
@@ -27,12 +27,12 @@ export const ShareButtons = ({ url, title, excerpt, hashtags }) => (
       <TelegramIcon size={32} className={shareButtonClasses} />
     </TelegramShareButton>
     <button
-      className="text-coolGray-300 hover:border-coolGray-300 inline-flex items-center justify-center rounded-md border p-2 shadow-md transition duration-200 hover:shadow-none"
+      className="text-coolGray-300  inline-flex items-center justify-center rounded-md  p-2 shadow-md transition duration-200 hover:shadow-none"
       onClick={() => {
         navigator.clipboard.writeText(url)
       }}
     >
-      <CopyLinkIcon />
+      <CopyLinkIcon height="64" width="64" />
     </button>
   </div>
 )
