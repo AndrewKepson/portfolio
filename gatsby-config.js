@@ -134,6 +134,7 @@ module.exports = {
         icon: 'src/images/icon.png',
       },
     },
+    `gatsby-plugin-smoothscroll`,
     {
       resolve: `@raae/gatsby-plugin-let-it-snow`,
       options: {
