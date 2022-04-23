@@ -20,7 +20,7 @@ const LinkedIn = () => (
   <a
     href="https://www.linkedin.com/in/andrewkepson/"
     className="hover:text-purple-500"
-    target="/blank"
+    target="_blank"
     rel="noreferrer"
     title="Andrew Kepson's LinkedIn"
   >
@@ -36,7 +36,7 @@ const Github = () => (
   <a
     href="https://github.com/AndrewKepson"
     className="hover:text-purple-500"
-    target="/blank"
+    target="_blank"
     rel="noreferrer"
     title="Andrew Kepson's GitHub"
   >
