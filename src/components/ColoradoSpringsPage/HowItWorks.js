@@ -29,25 +29,25 @@ const items = [
     number: 1,
     title: 'Planning',
     details:
-      "During planning we'll decide on hosting, branding, configuring your domain name, and the features you need.",
+      "During planning we'll decide on hosting, branding, configuring your domain name, and the features you need to succeed online.",
   },
   {
     number: 2,
     title: 'Design',
     details:
-      "I'll create a design that you love based on your brand an the journey your customer will take on your website.",
+      'The design is based on your brand and the journey your customer will take on your website. Your website is your digital storefront, and should look and feel like your brand.',
   },
   {
     number: 3,
     title: 'Development',
     details:
-      "At this stage your website begins to come to life! I'll build out the rough draft and test the functionality.",
+      "At this stage your website begins to come to life! The rough draft will be built out along with the site's core functionalities.",
   },
   {
     number: 4,
     title: 'Revisions',
     details:
-      "We'll review the website together and decide on the revisions that your website needs to be ready for production.",
+      'You will have the change to review the website and decide on the revisions that your website needs to be ready for production.',
   },
   {
     number: 5,
@@ -57,9 +57,9 @@ const items = [
   },
   {
     number: 6,
-    title: 'Optimization',
+    title: 'Maintenance & Optimization',
     details:
-      'Based on your business and marketing needs, the site can be continually expanded and optimized.',
+      'Based on your business and marketing needs, the site can be continually expanded and optimized. Make the most of the traffic you have and uncover ways to bring in more.',
   },
 ]
 
