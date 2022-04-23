@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
-import Fade from 'react-reveal/fade'
+import Fade from 'react-reveal/Fade'
 
 export const WebDevelopment = () => (
   <section className="snap-start snap-always overflow-hidden bg-white py-10">
-    <div className="container mx-auto px-4">
-      <Fade up>
+    <Fade up>
+      <div className="container mx-auto px-4">
         <div className="mb-16 md:mb-20 md:max-w-4xl">
           <h2 className="mb-4 font-roboto text-3xl font-bold leading-tight tracking-tighter text-gray-800 md:text-4xl">
             Professional Web Development in Colorado Springs
@@ -28,23 +28,28 @@ export const WebDevelopment = () => (
             their hand. Will your website be the one that they find?
           </p>
         </div>
-      </Fade>
-      <div className="-mx-4 flex flex-wrap lg:items-center">
-        <div className="mb-8 w-full px-4 md:mb-0 md:w-1/2">
-          {developmentList.map(({ title, details, icon }) => (
-            <ListItem key={title} title={title} details={details} icon={icon} />
-          ))}
-        </div>
-        <div className="w-full px-4 md:w-1/2">
-          <div className="relative mx-auto max-w-max shadow-lg md:mr-0">
-            <StaticImage
-              src="../../images/stock/colorado-springs-web-developer.jpg"
-              alt="Colorado Springs web developer working example."
-            />
+        <div className="-mx-4 flex flex-wrap lg:items-center">
+          <div className="mb-8 w-full px-4 md:mb-0 md:w-1/2">
+            {developmentList.map(({ title, details, icon }) => (
+              <ListItem
+                key={title}
+                title={title}
+                details={details}
+                icon={icon}
+              />
+            ))}
+          </div>
+          <div className="w-full px-4 md:w-1/2">
+            <div className="relative mx-auto max-w-max shadow-lg md:mr-0">
+              <StaticImage
+                src="../../images/stock/colorado-springs-web-developer.jpg"
+                alt="Colorado Springs web developer working example."
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </Fade>
   </section>
 )
 
