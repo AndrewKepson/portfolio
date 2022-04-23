@@ -47,7 +47,7 @@ const items = [
     number: 4,
     title: 'Revisions',
     details:
-      'You will have the change to review the website and decide on the revisions that your website needs to be ready for production.',
+      'You will have the chance to review the website and decide on the revisions that your website needs to be ready for production.',
   },
   {
     number: 5,
