@@ -21,8 +21,19 @@ const HTMLSitemap = () => {
             </Link>
           </li>
           <li>
-            <Link className="hover:text-purple-500" to="/headless-wordpress-developer/">
+            <Link
+              className="hover:text-purple-500"
+              to="/headless-wordpress-developer/"
+            >
               Headless WordPress Developer
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="hover:text-purple-500"
+              to="/colorado-springs-web-developer/"
+            >
+              Colorado Springs Web Developer
             </Link>
           </li>
           <li>
