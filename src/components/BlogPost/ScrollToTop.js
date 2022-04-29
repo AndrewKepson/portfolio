@@ -3,7 +3,7 @@ import scrollTo from 'gatsby-plugin-smoothscroll'
 
 export const ScrollToTop = () => (
   <button
-    className="fixed right-5 bottom-5 float-right cursor-pointer bg-gray-300 p-2 text-center"
+    className="fixed right-5 bottom-5 z-50 float-right cursor-pointer bg-gray-300 p-2 text-center shadow-sm hover:shadow-none"
     onClick={() => scrollTo('#featured-image')}
   >
     <svg

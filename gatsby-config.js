@@ -99,6 +99,9 @@ module.exports = {
             {
               family: `Work Sans`,
             },
+            {
+              family: `EB Garamond`,
+            },
           ],
         },
       },
