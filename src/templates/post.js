@@ -63,7 +63,7 @@ const Post = ({ data: { wpPost } }) => {
               <div
                 className={`mb-6 inline-block rounded-full ${chooseCategoryColor(
                   category
-                )} px-2 font-roboto font-medium shadow-md`}
+                )} px-2 font-garamond font-medium shadow-md`}
               >
                 {category}
               </div>
@@ -76,7 +76,7 @@ const Post = ({ data: { wpPost } }) => {
                   {date}
                 </p>
               </div>
-              <h1 className="mb-4 font-roboto text-3xl font-bold leading-tight tracking-tighter text-gray-900 md:text-4xl lg:text-5xl">
+              <h1 className="mb-4 font-garamond text-3xl font-normal leading-tight tracking-tighter text-gray-900 md:text-4xl lg:text-5xl">
                 {title}
               </h1>
               <div class="-mx-2 flex items-center">
@@ -90,7 +90,7 @@ const Post = ({ data: { wpPost } }) => {
                     imgClassName="rounded-full"
                   />
                 </div>
-                <div class="w-auto px-2">
+                <div class="w-auto px-2 font-garamond">
                   <h4 class="text-coolGray-800 text-base font-bold md:text-lg">
                     {author}
                   </h4>
@@ -128,7 +128,7 @@ const Post = ({ data: { wpPost } }) => {
             </aside>
 
             <div class="w-full md:flex-1 lg:mt-6">
-              <article className="prose mx-auto mb-16 max-w-full font-work-sans text-lg leading-relaxed text-gray-900 prose-headings:font-roboto prose-headings:font-semibold prose-h1:text-center prose-h1:text-5xl prose-h1:text-gray-800 prose-h2:text-4xl prose-h2:text-gray-700 prose-h3:text-3xl prose-h3:text-gray-600 prose-a:text-purple-600 prose-a:no-underline hover:prose-a:text-purple-500 prose-blockquote:border-purple-300 prose-img:shadow-xl md:w-2/3 md:text-xl">
+              <article className="prose mx-auto mb-16 max-w-full font-garamond text-xl leading-relaxed text-gray-900 prose-headings:font-garamond prose-headings:font-semibold prose-h1:text-center prose-h1:text-5xl prose-h1:text-gray-800 prose-h2:text-2xl prose-h2:text-gray-700 prose-h3:text-xl prose-h3:text-gray-600 prose-a:text-purple-600 prose-a:no-underline hover:prose-a:text-purple-500 prose-blockquote:border-purple-400 prose-blockquote:bg-gray-50 prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:shadow-lg prose-img:shadow-xl md:w-2/3 md:text-2xl md:prose-h2:text-3xl md:prose-h3:text-2xl lg:prose-h2:text-4xl lg:prose-h3:text-3xl">
                 <div dangerouslySetInnerHTML={{ __html: content }} />
                 <div className="text-right">{date}</div>
               </article>

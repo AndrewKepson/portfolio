@@ -6,7 +6,7 @@ export const TableOfContents = ({ headings }) => (
     {headings.map(heading => (
       <li
         key={heading.key}
-        className="text-md my-1 cursor-pointer font-roboto font-semibold text-gray-700 md:text-lg"
+        className="text-md my-1 cursor-pointer font-garamond font-semibold text-gray-700 md:text-lg"
       >
         <span onClick={() => scrollTo(`#${heading.slug}`)}>
           {heading.heading}

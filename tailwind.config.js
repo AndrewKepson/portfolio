@@ -4,6 +4,7 @@ module.exports = {
     fontFamily: {
       'work-sans': 'Work\\ Sans',
       roboto: 'Roboto',
+      garamond: 'EB\\ Garamond',
     },
     extend: {},
   },

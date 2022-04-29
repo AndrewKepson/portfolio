@@ -30,20 +30,20 @@ export const AboutPageContent = () => (
           </div>
         </div>
         <div className="mb-5 w-full px-4 lg:mb-0 lg:w-1/2">
-          <p className="mb-6 font-work-sans text-lg font-medium leading-7 text-gray-700">
+          <p className="mb-6 font-garamond text-lg font-medium leading-7 text-gray-700 md:text-2xl">
             I'm Andrew Kepson. I'm a web developer and digital marketer based in
             Colorado with a passion for building exceptionally fast websites.
           </p>
           <h3 className="mb-4 font-roboto text-2xl font-semibold text-gray-800 lg:text-3xl">
             How This All Started
           </h3>
-          <p className="mb-5 font-work-sans text-lg font-medium leading-7 text-gray-700">
+          <p className="mb-5 font-garamond text-lg font-medium leading-7 text-gray-700 md:text-2xl">
             I built my first website around 2003 using GeoCities to host web
             pages built purely with HTML. A couple of years later, I was
             creating custom MySpace pages for myself &amp; a few friends with
             CSS.
           </p>
-          <p className="font-work-sans text-lg font-medium leading-7 text-gray-700">
+          <p className="font-garamond text-lg font-medium leading-7 text-gray-700 md:text-2xl">
             At the time I didn't realize the opportunities available in web
             development, and in college I pursued my interests in writing and
             philosophy, earning my Bachelor of Arts as a double major in English
@@ -56,7 +56,7 @@ export const AboutPageContent = () => (
           <h3 className="mb-4 font-roboto text-2xl font-semibold text-gray-800 lg:text-3xl">
             Moving into Digital Marketing
           </h3>
-          <p className="font-work-sans text-lg font-medium leading-7 text-gray-700">
+          <p className="font-garamond text-lg font-medium leading-7 text-gray-700 md:text-2xl">
             After discovering the world of digital marketing as a content
             writer, I became interested in the world of SEO, joining the team at
             one of the leading digital marketing firms in the United States,
@@ -65,7 +65,7 @@ export const AboutPageContent = () => (
             businesses, from small local companies to ecommerce brands to large
             corporate enterprises and SaaS companies.
           </p>
-          <p className="mt-2 font-work-sans text-lg font-medium leading-7 text-gray-700">
+          <p className="mt-2 font-garamond text-lg font-medium leading-7 text-gray-700 md:text-2xl">
             Working in SEO also reignited my passion for web development, and I
             returned to school to attend University of Denver's coding bootcamp,
             which is an intensive full stack web development program focused on
@@ -74,7 +74,7 @@ export const AboutPageContent = () => (
           <h3 className="mb-4 font-roboto text-2xl font-semibold text-gray-800 lg:text-3xl">
             Back to My Roots
           </h3>
-          <p className="font-work-sans text-lg font-medium leading-7 text-gray-700">
+          <p className="font-garamond text-lg font-medium leading-7 text-gray-700 md:text-2xl">
             Upon graduating from University of Denver, I continued improving my
             knowledge and skills in SEO with a focus on SEO for React web
             applications, Core Web Vitals, and organic ecommerce growth. Not
