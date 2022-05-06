@@ -30,40 +30,6 @@ module.exports.createPages = async ({
     }
   `)
 
-  if (getBlogs.errors) throw new Error(getBlogs.errors)
-
-  const wordPressPosts = getBlogs.data.allWpPost.edges
-  const blogTemplate = path.resolve(`./src/templates/post.js`)
-
-  wordPressPosts.forEach(post =>
-    createPage({
-      path: post.node.uri,
-      component: slash(blogTemplate),
-      context: {
-        id: post.node.id,
-      },
-    })
-  )
-}
-
-module.exports.createPages = async ({
-  graphql,
-  actions: { createPage },
-  reporter,
-}) => {
-  const getBlogs = await graphql(`
-    {
-      allWpPost {
-        edges {
-          node {
-            id
-            uri
-          }
-        }
-      }
-    }
-  `)
-
   if (getBlogs.errors) {
     reporter.panicOnBuild(
       'Error while running GraphQL query to fetch WordPress posts.'
