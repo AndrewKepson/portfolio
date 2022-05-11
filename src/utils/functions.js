@@ -109,8 +109,8 @@ export const getHeadingsFromMarkdown = markdown => {
     .map(heading => {
       const classes =
         heading.type === 'h2'
-          ? 'my-1 font-roboto font-medium text-md md:text-lg text-gray-700 cursor-pointer'
-          : 'my-1 font-roboto font-medium text-sm md:text-md text-gray-500 cursor-pointer'
+          ? 'text-md my-1 cursor-pointer font-garamond font-semibold text-gray-700 md:text-lg'
+          : 'text-md my-1 cursor-pointer font-garamond font-semibold text-gray-600 md:text-md m-2'
 
       return {
         heading: heading.props.children[0],
