@@ -132,6 +132,9 @@ const Post = ({ data: { wpPost } }) => {
                 <div dangerouslySetInnerHTML={{ __html: content }} />
                 <div className="text-right">{date}</div>
               </article>
+              <p className="text-md text-center font-garamond text-gray-700 lg:text-lg">
+                This post is powered by headless WordPress.
+              </p>
             </div>
             <ScrollToTop />
           </div>
