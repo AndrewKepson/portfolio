@@ -12,6 +12,7 @@ export const Seo = ({
   ogImg = '',
   ogImgAltText = '',
   twitterImg = '',
+  noIndex = false,
 }) => {
   const { siteUrl, description: siteDescription, author } = useSiteMetadata()
 
@@ -74,6 +75,7 @@ export const Seo = ({
     >
       <title>{title}</title>
       {canonical && <link rel="canonical" href={canonical} />}
+      {noIndex && <meta name="robots" content="noindex" />}
     </Helmet>
   )
 }

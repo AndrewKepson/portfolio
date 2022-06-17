@@ -1,5 +1,13 @@
 export const CodePortfolio = [
   {
+    project: 'Filmpire',
+    github: 'https://github.com/AndrewKepson/filmpire_ak',
+    deployment: 'https://filmpire-andrew-kepson.netlify.app/',
+    description: `Filmpire is a web application built with React, Redux Toolkit, & MUI. Login with your TMDB Account to manage your favorite movies & more.`,
+    photo: 'Filmpire',
+    altText: "Filmpire home screen from Andrew Kepson's CodePortfolio.",
+  },
+  {
     project: 'Arcane Realty Investors',
     github:
       'https://github.com/AndrewKepson/Tailwind-Landing-Pages/blob/master/src/pages/arcane-realty-investors.js',
@@ -48,16 +56,6 @@ export const CodePortfolio = [
     description: `This web application allows users to log and process requests for IT assistance. It is built with React.js, Materialize CSS, and React-Redux for state management.`,
     photo: 'IT-Logger-Application',
     altText: 'Logging application using React.js and React-Redux',
-  },
-  {
-    project: 'Employee Management Application',
-    github: 'https://github.com/AndrewKepson/employee-management-application',
-    deployment:
-      'https://andrewkepson.github.io/employee-management-application/',
-    description:
-      'This simple React web application allows the user to manage a list of users and to find a user using the text input as a filter.',
-    photo: 'employee-management-application',
-    altText: 'Employee management application built with React.js',
   },
   {
     project: 'Note Taking Application',

@@ -1,6 +1,7 @@
 export * from './Header/Header'
 export * from './Footer/Footer'
 export * from './layout/MainLayout'
+export * from './layout/BlogLayout'
 export * from './head'
 export * from './HomePage/HomePageContent'
 export * from './AboutPage/AboutPageContent'

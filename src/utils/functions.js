@@ -13,7 +13,10 @@ export const processWordPressPost = postData => {
     content: postData.content,
     category: postData.categories.nodes[0].name,
     categories: postData.categories,
-    tags: postData.tags.nodes.map(tag => tag.name),
+    tags: postData.tags.nodes.map(tag => ({
+      name: tag.name,
+      uri: tag.uri,
+    })),
     seo: {
       title: postData.seo.title,
       canonical: postData.seo.canonical,

@@ -3,9 +3,11 @@ import { useWordPressCategories } from '../../hooks/useWordPressCategories'
 
 export const Sidebar = ({
   posts,
+  selectedCategory,
   searchedName,
   filterBySearch,
   filterByCategory,
+  searchInput,
   onClear,
 }) => {
   const categories = useWordPressCategories()
@@ -21,6 +23,7 @@ export const Sidebar = ({
               type="text"
               required=""
               onChange={filterBySearch}
+              value={searchInput}
             />
             <span className="absolute inset-y-0 right-4 inline-flex items-center text-gray-600">
               <svg
@@ -41,12 +44,18 @@ export const Sidebar = ({
             <select
               required=""
               className="w-full appearance-none rounded border border-gray-300 py-4 pl-4 pr-10"
-              onChange={filterByCategory}
-              defaultValue="all"
+              onChange={e => filterByCategory(e)}
+              value={selectedCategory}
             >
-              <option value="all">All Categories</option>
+              <option value="all" name="all">
+                All Categories
+              </option>
               {categories.map(category => (
-                <option key={category.id} value={category.name}>
+                <option
+                  key={category.id}
+                  value={category.uri}
+                  name={category.name}
+                >
                   {category.name}
                 </option>
               ))}

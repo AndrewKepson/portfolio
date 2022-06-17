@@ -1,24 +1,29 @@
 import React, { useState } from 'react'
-import { useWordPressPosts } from '../../hooks/useWordPressPosts'
+import PropTypes from 'prop-types'
+import { navigate } from 'gatsby'
 
 import { BlogPost } from './BlogPost'
 import { Sidebar } from './Sidebar'
 import { NothingHere } from './NothingHere'
 
-export const BlogPageContent = () => {
-  const allPosts = useWordPressPosts()
-
+export const BlogPageContent = ({
+  posts,
+  category = 'all',
+  updateCategory,
+}) => {
   const [displayedPosts, setDisplayedPosts] = useState({
-    allPosts,
-    displayedPosts: allPosts,
+    posts,
+    displayedPosts: posts,
   })
+  const [searchInput, setSearchInput] = useState('')
 
   const filterBySearch = e => {
     const input = e.target.value
-    const posts = [...allPosts] || []
+
+    setSearchInput(input)
 
     if (input === '') {
-      setDisplayedPosts(prev => ({ ...prev, displayedPosts: allPosts }))
+      setDisplayedPosts(prev => ({ ...prev, displayedPosts: posts }))
     } else {
       const filteredList = posts.filter(
         post =>
@@ -37,23 +42,13 @@ export const BlogPageContent = () => {
   }
 
   const filterByCategory = e => {
-    const selected = e.target.value
+    e.preventDefault()
+    console.log(e)
+    const { value: categoryURI, name } = e.target
 
-    if (selected === 'all') {
-      setDisplayedPosts(prev => ({
-        ...prev,
-        displayedPosts: [...allPosts],
-      }))
-    } else {
-      const categoryPosts = allPosts.filter(
-        post => post.categories.nodes[0].name === selected
-      )
+    updateCategory(name)
 
-      setDisplayedPosts(prev => ({
-        ...prev,
-        displayedPosts: [...categoryPosts],
-      }))
-    }
+    name === 'all' ? navigate(`/blog/`) : navigate(categoryURI)
   }
 
   const onClear = e => {
@@ -61,15 +56,21 @@ export const BlogPageContent = () => {
 
     setDisplayedPosts(prev => ({
       ...prev,
-      displayedPosts: [...allPosts],
+      displayedPosts: [...posts],
     }))
+
+    setSearchInput('')
+
+    navigate(`/blog/`)
   }
 
   return (
     <div className="-mx-4 flex flex-wrap justify-center">
       <Sidebar
-        posts={allPosts}
+        posts={posts}
+        selectedCategory={category}
         searchedName={null}
+        searchInput={searchInput}
         filterBySearch={filterBySearch}
         filterByCategory={filterByCategory}
         onClear={onClear}
@@ -92,4 +93,9 @@ export const BlogPageContent = () => {
       </div>
     </div>
   )
+}
+
+BlogPageContent.propTypes = {
+  posts: PropTypes.array.isRequired,
+  category: PropTypes.string,
 }

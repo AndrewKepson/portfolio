@@ -1,7 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { useWordPressPosts } from '../hooks/useWordPressPosts'
 
-import { Layout, Seo, BlogPageContent } from '../components/components'
+import {
+  Layout,
+  BlogLayout,
+  Seo,
+  BlogPageContent,
+} from '../components/components'
 
 const BlogPage = ({
   data: {
@@ -10,17 +16,21 @@ const BlogPage = ({
       schemaMarkup: { schemaMarkup },
     },
   },
-}) => (
-  <Layout>
-    <Seo
-      title={seo.title}
-      description={seo.metaDesc}
-      canonical={seo.canonical}
-    />
-    <BlogPageContent />
-    <div dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
-  </Layout>
-)
+}) => {
+  const chronologicalPosts = useWordPressPosts()
+
+  return (
+    <Layout>
+      <Seo
+        title={seo.title}
+        description={seo.metaDesc}
+        canonical={seo.canonical}
+      />
+      <BlogLayout posts={chronologicalPosts} />
+      <div dangerouslySetInnerHTML={{ __html: schemaMarkup }} />
+    </Layout>
+  )
+}
 
 export default BlogPage
 

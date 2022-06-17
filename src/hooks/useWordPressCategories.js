@@ -46,5 +46,9 @@ export const useWordPressCategories = () => {
     }
   `)
 
-  return [...allWpCategory.edges.map(edge => edge.node)]
+  return [
+    ...allWpCategory.edges
+      .filter(category => category.node.name !== 'Uncategorized')
+      .map(edge => edge.node),
+  ]
 }
