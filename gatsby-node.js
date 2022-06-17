@@ -17,9 +17,26 @@ module.exports.createPages = async ({
     isPermanent: true,
   })
 
-  const getBlogs = await graphql(`
+  const result = await graphql(`
     {
       allWpPost {
+        edges {
+          node {
+            id
+            uri
+          }
+        }
+      }
+      allWpCategory {
+        edges {
+          node {
+            id
+            uri
+            name
+          }
+        }
+      }
+      allWpTag {
         edges {
           node {
             id
@@ -30,23 +47,52 @@ module.exports.createPages = async ({
     }
   `)
 
-  if (getBlogs.errors) {
+  if (result.errors) {
     reporter.panicOnBuild(
-      'Error while running GraphQL query to fetch WordPress posts.'
+      'Error while running GraphQL query to fetch WordPress data for page generation.'
     )
     return
   }
 
-  const wordPressPosts = getBlogs.data.allWpPost.edges
-  const blogTemplate = path.resolve(`./src/templates/post.js`)
+  const wordPressPosts = result.data.allWpPost.edges
+  const wordPressCategories = result.data.allWpCategory.edges.filter(
+    category => category.node.name !== 'Uncategorized'
+  )
+  const wordPressTags = result.data.allWpTag.edges
+
+  const wordPressPostTemplate = path.resolve(`./src/templates/wordPressPost.js`)
+  const wordPressCategoryTemplate = path.resolve(
+    `./src/templates/wordPressCategory.js`
+  )
+  const wordPressTagTemplate = path.resolve(`./src/templates/wordPressTag.js`)
 
   wordPressPosts.forEach(post =>
     createPage({
       path: post.node.uri,
-      component: slash(blogTemplate),
+      component: slash(wordPressPostTemplate),
       context: {
         id: post.node.id,
       },
     })
   )
+
+  wordPressCategories.forEach(category =>
+    createPage({
+      path: category.node.uri,
+      component: slash(wordPressCategoryTemplate),
+      context: {
+        id: category.node.id,
+      },
+    })
+  )
+
+  // wordPressTags.forEach(tag =>
+  //   createPage({
+  //     path: tag.node.uri,
+  //     component: slash(wordPressTagTemplate),
+  //     context: {
+  //       id: tag.node.id,
+  //     },
+  //   })
+  // )
 }
