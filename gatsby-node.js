@@ -17,7 +17,7 @@ module.exports.createPages = async ({
     isPermanent: true,
   })
 
-  const getBlogs = await graphql(`
+  const result = await graphql(`
     {
       allWpPost {
         edges {
@@ -27,59 +27,51 @@ module.exports.createPages = async ({
           }
         }
       }
+      allWpCategory {
+        edges {
+          node {
+            id
+            uri
+            name
+          }
+        }
+      }
     }
   `)
 
-  if (getBlogs.errors) throw new Error(getBlogs.errors)
+  if (result.errors) {
+    reporter.panicOnBuild(
+      'Error while running GraphQL query to fetch WordPress data for page generation.'
+    )
+    return
+  }
 
-  const wordPressPosts = getBlogs.data.allWpPost.edges
-  const blogTemplate = path.resolve(`./src/templates/post.js`)
+  const wordPressPosts = result.data.allWpPost.edges
+  const wordPressCategories = result.data.allWpCategory.edges.filter(
+    category => category.node.name !== 'Uncategorized'
+  )
+
+  const wordPressPostTemplate = path.resolve(`./src/templates/wordPressPost.js`)
+  const wordPressCategoryTemplate = path.resolve(
+    `./src/templates/wordPressCategory.js`
+  )
 
   wordPressPosts.forEach(post =>
     createPage({
       path: post.node.uri,
-      component: slash(blogTemplate),
+      component: slash(wordPressPostTemplate),
       context: {
         id: post.node.id,
       },
     })
   )
-}
 
-module.exports.createPages = async ({
-  graphql,
-  actions: { createPage },
-  reporter,
-}) => {
-  const getBlogs = await graphql(`
-    {
-      allWpPost {
-        edges {
-          node {
-            id
-            uri
-          }
-        }
-      }
-    }
-  `)
-
-  if (getBlogs.errors) {
-    reporter.panicOnBuild(
-      'Error while running GraphQL query to fetch WordPress posts.'
-    )
-    return
-  }
-
-  const wordPressPosts = getBlogs.data.allWpPost.edges
-  const blogTemplate = path.resolve(`./src/templates/post.js`)
-
-  wordPressPosts.forEach(post =>
+  wordPressCategories.forEach(category =>
     createPage({
-      path: post.node.uri,
-      component: slash(blogTemplate),
+      path: category.node.uri,
+      component: slash(wordPressCategoryTemplate),
       context: {
-        id: post.node.id,
+        id: category.node.id,
       },
     })
   )
