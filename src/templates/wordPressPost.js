@@ -18,7 +18,7 @@ import {
   ScrollToTop,
 } from '../components/components'
 
-const Post = ({ data: { wpPost } }) => {
+const WordPressPost = ({ data: { wpPost } }) => {
   const { siteUrl } = useSiteMetadata()
   const {
     title,
@@ -144,7 +144,7 @@ const Post = ({ data: { wpPost } }) => {
   )
 }
 
-export default Post
+export default WordPressPost
 
 export const query = graphql`
   query ($id: String!) {

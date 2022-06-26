@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import { usePortraitPhoto } from '../../hooks/usePortraitPhoto'
+import { usePortraitPhoto } from '../../hooks'
 
 export const AboutPageContent = () => (
   <section className="bg-white py-20 xl:pt-24 xl:pb-28">
