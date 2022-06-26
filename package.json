@@ -14,6 +14,7 @@
   "dependencies": {
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.5",
+    "@parcel/namer-default": "^2.5.0",
     "@raae/gatsby-plugin-let-it-snow": "^1.0.2",
     "dotenv": "^16.0.0",
     "gatsby": "^4.14.0",
